@@ -124,5 +124,7 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.deface.enabled = ENV["DB_ADAPTER"].blank? || ENV["DB_ADAPTER"] == "postgresql"
+  if config.respond_to?(:deface)
+    config.deface.enabled = ENV["DB_ADAPTER"].blank? || ENV["DB_ADAPTER"] == "postgresql"
+  end
 end
