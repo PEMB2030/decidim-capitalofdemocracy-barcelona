@@ -24,6 +24,8 @@ gem "puma", ">= 5.0.0"
 
 gem "wicked_pdf", "~> 2.1"
 
+gem "deface", ">= 1.9"
+
 group :development, :test do
   gem "faker", "~> 2.14"
   gem "byebug", "~> 11.0", platform: :mri
