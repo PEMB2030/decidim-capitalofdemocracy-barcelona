@@ -1,19 +1,1 @@
-<!-- replace ".main-footer" -->
 
-<div class="main-footer">
-  <div class="row">
-    <div class="main-footer__content flex--sbc">
-      <div class="logos flex--sbc">
-        <% if current_organization.official_img_footer.attached? %>
-          <%= link_to current_organization.official_url, class: "footer-logo flex--cc" do %>
-            <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
-            <p class="footer__logo-title"><%= t(".logo_title") %></p>
-          <% end %>
-        <% end %>
-        <%= image_pack_tag("media/images/footer_logo_1.svg") %>
-        <%= image_pack_tag("media/images/footer_logo_2.svg") %>
-      </div>
-      <%= render partial: "layouts/decidim/social_media_links" %>
-    </div>
-  </div>
-</div>
