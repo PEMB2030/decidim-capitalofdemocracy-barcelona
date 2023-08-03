@@ -2,7 +2,7 @@
 
 <div class="main-footer">
   <div class="row">
-    <div class="main-footer__content flex--sbc">
+    <div class="main-footer__content flex--sbc column">
       <div class="logos flex--sbc">
         <% if current_organization && current_organization.official_img_footer.attached? %>
           <%= link_to current_organization.official_url, class: "footer-logo flex--cc" do %>
