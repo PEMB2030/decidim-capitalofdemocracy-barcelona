@@ -12,6 +12,7 @@
     </div>
     <div class="medium-3 large-4 column">
     <nav class="main__footer__nav">
+     <% if current_organization && current_user %>
           <ul class="footer-nav">
             <% organization_pages = current_organization.static_pages_accessible_for(current_user) %>
             <% if organization_pages.any? %>
@@ -29,6 +30,7 @@
             <li><%= link_to t("layouts.decidim.footer.download_open_data"), decidim.open_data_download_path %></li>
             <li><a href="#" data-open="cc-modal"><%= t("layouts.decidim.footer.cookie_settings") %></a></li>
           </ul>
+       <% end %>
         </nav>
     </div>
     <div class="medium-3 large-2 column">
