@@ -11,6 +11,10 @@
   margin-right: 8px;
 }
 
+.logo-wrapper .header__organization-name {
+  color: #000;
+}
+
 .header__logo-title {
   margin: 0;
   width: 95px;
@@ -94,7 +98,7 @@
   .main-nav__link--active a::before {
     content: "";
     position: absolute;
-    left: 2.5em;
+    left: 0.5em;
     top: 20px;
     width: 10px;
     height: 10px;
