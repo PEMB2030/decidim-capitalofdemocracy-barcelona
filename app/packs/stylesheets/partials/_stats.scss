@@ -16,3 +16,24 @@
 .statistics-cell .statistic__title {
   text-transform: lowercase;
 }
+
+.statistic__icon {
+  height: 100%;
+  width: 50%;
+}
+
+.card--list__icon {
+  fill: $rose;
+  height: 50%;
+  width: auto;
+}
+
+.statistic__title,
+.statistic__number {
+  text-align: left;
+  display: block;
+}
+
+.home-stats__lowlight .statistic__icon {
+  display: none;
+}

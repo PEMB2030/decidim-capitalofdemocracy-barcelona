@@ -22,5 +22,10 @@ module DecidimCapitalitatDev
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # generic overrides
+    config.to_prepare do
+      Decidim::StatisticCell.include(Decidim::StatisticCellOverride)
+    end
   end
 end
