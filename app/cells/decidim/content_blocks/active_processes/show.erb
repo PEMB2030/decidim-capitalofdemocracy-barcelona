@@ -2,7 +2,7 @@
   <div class="wrapper-home">
     <div class="row">
       <h3 class="section-heading"><%= t(".title") %></h3>
-      <div class="row small-up-1 medium-up-3 home-bullets">
+      <div class="row small-up-1 medium-up-3">
         <% (1..3).each do |i| %>
           <div class="column">
             <div class="card">
@@ -10,7 +10,7 @@
                 <% if (image_url = image_url_for(i)) %>
                   <%= image_tag image_url %>
                 <% end %>
-                <p><%= link_text(i) %></p>
+                <h3 class="heading3 card-header text-center" style="color: <%= text_color(i) %>;"><%= link_text(i) %></h3>
               <% end %>
             </div>
           </div>

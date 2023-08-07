@@ -9,6 +9,7 @@ en:
         link_text: Link text
         link_url: Link URL
         image: Card image
+        text_color: Text color
   hello: Hello world
   layouts:
     decidim:

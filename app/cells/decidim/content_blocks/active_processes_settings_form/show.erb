@@ -13,6 +13,7 @@
         <% form.fields_for :settings, form.object.settings do |settings_fields| %>
           <%= settings_fields.text_field "link_text_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_text") %>
           <%= settings_fields.text_field "link_url_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_url") %>
+          <%= settings_fields.text_field "text_color_#{i}", label: t("decidim.content_blocks.active_processes_settings_form.text_color"), type: "color" %>
         <% end %>
 
         <% form.fields_for :images, form.object.images do |images_fields| %>

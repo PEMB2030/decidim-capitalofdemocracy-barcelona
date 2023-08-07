@@ -38,6 +38,7 @@ module DecidimCapitalitatDev
           (1..3).each do |i|
             settings.attribute "link_url_#{i}".to_sym, type: :text
             settings.attribute "link_text_#{i}".to_sym, type: :text, translated: true
+            settings.attribute "text_color_#{i}".to_sym, type: :string
           end
         end
 

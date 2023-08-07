@@ -30,6 +30,10 @@ module Decidim
         image.present? && image.attached?
       end
 
+      def text_color(attribute)
+        model.settings["text_color_#{attribute}"]
+      end
+
       private
 
       def image_blob(attribute)
