@@ -49,6 +49,10 @@
   background-color: transparent !important;
 }
 
+.header .navbar {
+  background-color: $violet;
+}
+
 .off-canvas,
 .navbar {
   background-color: $blue;
@@ -71,6 +75,10 @@
   color: #ffffff;
   padding: 0 4rem 0 2rem;
   margin: 1rem 0;
+}
+
+.main-nav__link a {
+  font-weight: bold;
 }
 
 @media print, screen and (max-width: 40em) {
