@@ -14,9 +14,8 @@ en:
         name: Extended hero
       extended_hero_settings_form:
         background_image: Background image
-        second_line: Second line of title
-        third_line: Third line of title
-        welcome_text: Welcome text
+        subtitle: Subtitle
+        welcome_text: Welcome title
   hello: Hello world
   layouts:
     decidim:
