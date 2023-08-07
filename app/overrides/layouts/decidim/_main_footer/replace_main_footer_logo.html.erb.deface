@@ -7,7 +7,6 @@
         <% if current_organization && current_organization.official_img_footer.attached? %>
           <%= link_to current_organization.official_url, class: "footer-logo flex--cc" do %>
             <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
-            <p class="footer__logo-title"><%= t(".logo_title") %></p>
           <% end %>
         <% end %>
         <%= image_pack_tag("media/images/footer_logo_1.svg") %>
