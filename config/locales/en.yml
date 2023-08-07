@@ -1,5 +1,14 @@
 ---
 en:
+  decidim:
+    content_blocks:
+      active_processes:
+        name: Active processes
+        title: Active processes
+      active_processes_settings_form:
+        link_text: Link text
+        link_url: Link URL
+        image: Card image
   hello: Hello world
   layouts:
     decidim:
