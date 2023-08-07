@@ -8,7 +8,7 @@ module Decidim
       end
 
       def link_url(attribute)
-        translated_attribute(model.settings["link_url_#{attribute}"])
+        model.settings["link_url_#{attribute}"]
       end
 
       def link_text(attribute)
@@ -32,6 +32,14 @@ module Decidim
 
       def text_color(attribute)
         model.settings["text_color_#{attribute}"]
+      end
+
+      def button_text
+        translated_attribute(model.settings.button_text)
+      end
+
+      def button_url
+        model.settings.button_url
       end
 
       private

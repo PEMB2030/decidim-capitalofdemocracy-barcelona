@@ -35,6 +35,9 @@ module DecidimCapitalitatDev
         content_block.public_name_key = "decidim.content_blocks.active_processes.name"
 
         content_block.settings do |settings|
+          settings.attribute :button_text, type: :text, translated: true
+          settings.attribute :button_url, type: :text
+
           (1..3).each do |i|
             settings.attribute "link_url_#{i}".to_sym, type: :text
             settings.attribute "link_text_#{i}".to_sym, type: :text, translated: true

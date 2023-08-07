@@ -6,6 +6,8 @@ en:
         name: Active processes
         title: Active processes
       active_processes_settings_form:
+        button_text: Button text
+        button_url: Button URL
         image: Card image
         link_text: Link text
         link_url: Link URL
