@@ -2,27 +2,28 @@
 en:
   decidim:
     content_blocks:
-      extended_hero_settings_form:
-        welcome_text: Welcome text
-        second_line: Second line of title
-        third_line: Third line of title
-        background_image: Background image
-      extended_hero:
-        name: Extended hero
       active_processes:
         name: Active processes
         title: Active processes
       active_processes_settings_form:
+        image: Card image
         link_text: Link text
         link_url: Link URL
-        image: Card image
         text_color: Text color
+      extended_hero:
+        name: Extended hero
+      extended_hero_settings_form:
+        background_image: Background image
+        second_line: Second line of title
+        third_line: Third line of title
+        welcome_text: Welcome text
   hello: Hello world
   layouts:
     decidim:
       footer:
-        made_with_open_source: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free software</a>
         cookie_settings: Cookie settings
+        made_with_open_source: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free
+          software</a>
       header_logo:
         logo_city: Barcelona
         logo_title: European Capital of Democracy
