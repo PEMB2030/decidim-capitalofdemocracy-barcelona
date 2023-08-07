@@ -36,7 +36,7 @@ module Decidim
       def processed_welcome_text
         text_parts = translated_welcome_text.split("<br>", 2)
         content_tag(:span, decidim_sanitize(text_parts[0]), class: "no-wrap") +
-          (text_parts[1] ? (content_tag(:br) + decidim_sanitize(text_parts[1])) : "")
+          (text_parts[1] ? decidim_sanitize(text_parts[1]) : "")
       end
 
       # A MD5 hash of model attributes because is needed because
