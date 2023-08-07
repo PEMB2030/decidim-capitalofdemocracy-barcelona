@@ -2,6 +2,13 @@
 en:
   decidim:
     content_blocks:
+      extended_hero_settings_form:
+        welcome_text: Welcome text
+        second_line: Second line of title
+        third_line: Third line of title
+        background_image: Background image
+      extended_hero:
+        name: Extended hero
       active_processes:
         name: Active processes
         title: Active processes

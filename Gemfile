@@ -39,6 +39,7 @@ group :development do
   gem "listen"
   gem "spring"
   gem "spring-watcher-listen"
+  gem "rubocop-faker"
   gem "web-console"
 end
 

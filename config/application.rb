@@ -51,6 +51,26 @@ module DecidimCapitalitatDev
 
         content_block.default!
       end
+
+      Decidim.content_blocks.register(:homepage, :extended_hero) do |content_block|
+        content_block.cell = "decidim/content_blocks/extended_hero"
+        content_block.settings_form_cell = "decidim/content_blocks/extended_hero_settings_form"
+        content_block.public_name_key = "decidim.content_blocks.extended_hero.name"
+
+        content_block.settings do |settings|
+          settings.attribute :welcome_title, type: :text, translated: true
+          settings.attribute :subtitle, type: :text, translated: true
+        end
+
+        content_block.images = [
+          {
+            name: :background_image,
+            uploader: "Decidim::HomepageImageUploader"
+          }
+        ]
+
+        content_block.default!
+      end
     end
   end
 end
