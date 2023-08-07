@@ -11,7 +11,7 @@
     <div class="tabs-panel <%= 'is-active' if i == 1 %>" id="panel<%= i %>">
       <fieldset class="fieldset">
         <% form.fields_for :settings, form.object.settings do |settings_fields| %>
-          <%= settings_fields.text_field "link_text_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_text") %>
+          <%= settings_fields.translated :text_field,  "link_text_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_text") %>
           <%= settings_fields.text_field "link_url_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_url") %>
           <%= settings_fields.text_field "text_color_#{i}", label: t("decidim.content_blocks.active_processes_settings_form.text_color"), type: "color" %>
         <% end %>
