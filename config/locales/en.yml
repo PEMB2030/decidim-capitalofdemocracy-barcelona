@@ -4,6 +4,7 @@ en:
   layouts:
     decidim:
       footer:
+        made_with_open_source: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free software</a>
         cookie_settings: Cookie settings
       header_logo:
         logo_city: Barcelona
