@@ -12,6 +12,28 @@
     width: 100%;
     height: auto;
   }
+
+  .section-heading {
+    position: relative;
+    margin-left: 1.5rem;
+    color: $violet;
+  }
+
+  .section-heading::after {
+    content: "";
+    position: absolute;
+    left: -1.5em;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border: solid $violet;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+  }
+
+  .section-heading::before {
+    content: none;
+  }
 }
 
 @media print, screen and (max-width: 40em) {
