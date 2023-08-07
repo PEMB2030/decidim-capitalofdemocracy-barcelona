@@ -10,7 +10,8 @@
                 <% if (image_url = image_url_for(i)) %>
                   <%= image_tag image_url %>
                 <% end %>
-                <h3 class="heading3 card-header text-center" style="color: <%= text_color(i) %>;"><%= link_text(i) %></h3>
+                <h3 class="heading3 card-header text-left ml-s" style="color: <%= text_color(i) %>;"><%= link_text(i)
+                %></h3>
               <% end %>
             </div>
           </div>

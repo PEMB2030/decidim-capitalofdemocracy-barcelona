@@ -4,6 +4,19 @@
   }
 
   .card-header {
-    margin: 2rem auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media print, screen and (max-width: 40em) {
+  #active-processes .card-header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
