@@ -7,14 +7,6 @@ module Decidim
         render
       end
 
-      def translated_welcome_text
-        translated_attribute(model.settings.welcome_title)
-      end
-
-      def translated_subtitle
-        translated_attribute(model.settings.subtitle)
-      end
-
       def welcome_text
         if translated_welcome_text.blank?
           default_welcome_text
@@ -28,6 +20,14 @@ module Decidim
       end
 
       private
+
+      def translated_welcome_text
+        translated_attribute(model.settings.welcome_title)
+      end
+
+      def translated_subtitle
+        translated_attribute(model.settings.subtitle)
+      end
 
       def default_welcome_text
         t("decidim.pages.home.hero.welcome", organization: current_organization.name)
