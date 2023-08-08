@@ -15,12 +15,12 @@
   letter-spacing: 0.1rem;
   text-shadow: none;
 
+  br {
+    display: block;
+  }
+
   @include breakpoint(medium) {
     font-size: 1.5rem;
-
-    br {
-      display: block;
-    }
   }
 
   @include breakpoint(mediumlarge) {
