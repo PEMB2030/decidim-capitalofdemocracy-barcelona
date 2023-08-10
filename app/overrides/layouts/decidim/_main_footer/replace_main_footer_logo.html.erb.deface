@@ -9,8 +9,12 @@
             <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
           <% end %>
         <% end %>
-        <%= image_pack_tag("media/images/footer_logo_1.svg") %>
-        <%= image_pack_tag("media/images/footer_logo_2.svg") %>
+        <div class="footer-logo flex--cc">
+          <%= image_pack_tag("media/images/logo_capitalitat.png") %>
+        </div>
+        <div class="footer-logo flex--cc">
+          <%= image_pack_tag("media/images/logo_footer_2.png") %>
+        </div>
       </div>
       <%= render partial: "layouts/decidim/social_media_links" %>
     </div>
