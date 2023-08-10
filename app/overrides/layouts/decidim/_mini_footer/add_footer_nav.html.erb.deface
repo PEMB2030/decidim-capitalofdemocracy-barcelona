@@ -15,6 +15,7 @@
           <ul class="footer-nav">
             <% organization_pages = current_organization.static_pages_accessible_for(current_user) %>
             <% if organization_pages.any? %>
+              <li><%= link_to t("decidim.pages.index.title"), decidim.pages_path %></li>
               <% current_organization.static_page_topics.where(show_in_footer: true).each do |page_topic| %>
                 <% topic_pages = page_topic.accessible_pages_for(current_user) %>
                 <% if topic_pages.any? %>
