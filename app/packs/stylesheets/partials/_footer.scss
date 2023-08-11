@@ -12,14 +12,18 @@
   letter-spacing: 0.02rem;
 }
 
-.footer-logo {
-  margin-right: 1rem;
+.main-footer a, .mini-footer a {
+  color: #ffffff;
+}
+
+.footer-social__icon .icon {
+  width: 26px;
+  height: 26px;
 }
 
 @media print, screen and (min-width: 40em) {
   .logos img {
     margin-right: 1rem;
-    height: 50px;
   }
 
   .logos img:last-child {
@@ -28,6 +32,12 @@
 
   .footer-nav {
     padding-top: 0;
+  }
+
+  .footer-logo {
+    margin-right: 1rem;
+    display: block;
+    width: 140px;
   }
 }
 
@@ -53,13 +63,4 @@
   .main-footer__content {
     flex-direction: column-reverse;
   }
-}
-
-.main-footer a, .mini-footer a {
-  color: #ffffff;
-}
-
-.footer-social__icon .icon {
-  width: 26px;
-  height: 26px;
 }
