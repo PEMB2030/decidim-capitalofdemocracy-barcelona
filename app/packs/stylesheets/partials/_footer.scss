@@ -42,6 +42,9 @@
 }
 
 @media print, screen and (max-width: 40em) {
+  .logos {
+    margin-bottom: 2rem;
+  }
   .logos img,
   .logos a {
     margin-top: 2rem;
@@ -61,6 +64,6 @@
   }
 
   .main-footer__content {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }

@@ -8,7 +8,7 @@
   <% end %>
   <div class="row">
     <div class="main-footer__content flex--sbc column">
-      <div class="logos flex--sbc">
+      <div class="medium-6 large-4 large-offset-2 logos flex--fsc">
         <div class="footer-logo">
           <%= image_pack_tag("media/images/logo_capitalitat.png") %>
         </div>
