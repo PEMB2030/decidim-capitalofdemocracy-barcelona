@@ -1,0 +1,22 @@
+<!-- replace ".main-footer" -->
+
+<div class="main-footer">
+  <% if current_organization && current_organization.official_img_footer.attached? %>
+    <%= link_to current_organization.official_url, class: "main-footer__badge" do %>
+      <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
+    <% end %>
+  <% end %>
+  <div class="row">
+    <div class="main-footer__content flex--sbc column">
+      <div class="logos flex--sbc">
+        <div class="footer-logo">
+          <%= image_pack_tag("media/images/logo_capitalitat.png") %>
+        </div>
+        <div class="footer-logo">
+          <%= image_pack_tag("media/images/logo_footer_2.png") %>
+        </div>
+      </div>
+      <%= render partial: "layouts/decidim/social_media_links" %>
+    </div>
+  </div>
+</div>

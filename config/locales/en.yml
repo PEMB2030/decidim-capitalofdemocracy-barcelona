@@ -1,33 +1,37 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  decidim:
+    content_blocks:
+      active_processes:
+        name: Active processes
+        title: Active processes
+      active_processes_settings_form:
+        button_text: Button text
+        button_url: Button URL
+        image: Card image
+        link_text: Link text
+        link_url: Link URL
+        text_color: Text color
+      extended_hero:
+        name: Extended hero
+      extended_hero_settings_form:
+        background_image: Background image
+        subtitle: Subtitle
+        welcome_text: Welcome title
+  hello: Hello world
+  layouts:
+    decidim:
+      footer:
+        cookie_settings: Cookie settings
+        made_with_open_source: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free
+          software</a>
+      header_logo:
+        logo_city: Barcelona
+        logo_title: European Capital of Democracy
+      main_footer:
+        logo_title: European Capital of Democracy
+  locale:
+    locale_name:
+      ca: cat
+      en: eng
+      es: es
