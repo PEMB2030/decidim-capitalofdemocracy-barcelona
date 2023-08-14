@@ -1,0 +1,132 @@
+.logo-wrapper a.flex--cc {
+  display: flex !important;
+  font-family: Galano, sans-serif;
+}
+
+.logo-wrapper a.flex--cc:hover {
+  text-decoration: none;
+}
+
+.logo-wrapper a.flex--cc img {
+  margin-right: 8px;
+}
+
+.logo-wrapper .header__organization-name {
+  color: $black-font;
+}
+
+.header__logo-title {
+  margin: 0;
+  width: 95px;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.header__logo-title.city {
+  border-top: 1px solid $black-font;
+  border-bottom: 1px solid $black-font;
+  height: 100%;
+  line-height: initial;
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.header .title-bar {
+  background-color: transparent;
+  color: $black-font;
+}
+
+.header .title-bar a {
+  color: $black-font;
+}
+
+.is-dropdown-submenu-parent.opens-right a::after {
+  border-top-color: $black-font !important;
+}
+
+.header .title-bar {
+  background-color: transparent !important;
+}
+
+.header .navbar {
+  background-color: $violet;
+}
+
+.off-canvas,
+.navbar {
+  background-color: $blue;
+}
+
+.usermenu-off-canvas-holder .usermenu-off-canvas {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.off-canvas.position-right.is-transition-push {
+  box-shadow: none;
+}
+
+.nav-locales a {
+  color: #ffffff;
+}
+
+.nav-locales {
+  color: #ffffff;
+  padding: 0 4rem 0 2rem;
+  margin: 1rem 0;
+}
+
+.main-nav__link a {
+  font-weight: bold;
+}
+
+@media print, screen and (max-width: 40em) {
+  .main-nav__link--active a {
+    box-shadow: none;
+    border-bottom: #ffffff 1px solid;
+  }
+
+  .topbar__user__login {
+    border-bottom: #ffffff 1px solid !important;
+    border-top: #ffffff 1px solid !important;
+  }
+
+  .topbar__dropmenu.language-choose {
+    display: none;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .main-nav__link--active a {
+    box-shadow: none;
+    position: relative;
+  }
+
+  .main-nav__link--active a::before {
+    content: "";
+    position: absolute;
+    left: 0.5em;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+  }
+
+  .hide-for-medium {
+    display: none !important;
+  }
+}
+
+@media print, screen and (max-width: 39.9988em) {
+  .title-bar {
+    border-top: 2.125rem solid transparent;
+  }
+}
+
+.input-group-field {
+  background-color: #ffffff !important;
+  border: 1px solid $black-font !important;
+}
