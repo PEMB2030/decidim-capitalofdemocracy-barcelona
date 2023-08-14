@@ -1,0 +1,33 @@
+<ul class="tabs" data-tabs id="active-processes-tabs">
+  <% (1..3).each do |i| %>
+    <li class="tabs-title <%= 'is-active' if i == 1 %>">
+      <a href="#panel<%= i %>" <%= 'aria-selected="true"' if i == 1 %> data-tabs-target="panel<%= i %>">Item <%= i %></a>
+    </li>
+  <% end %>
+</ul>
+
+<div class="tabs-content" data-tabs-content="active-processes-tabs">
+  <% (1..3).each do |i| %>
+    <div class="tabs-panel <%= 'is-active' if i == 1 %>" id="panel<%= i %>">
+      <fieldset class="fieldset">
+        <% form.fields_for :settings, form.object.settings do |settings_fields| %>
+          <%= settings_fields.translated :text_field,  "link_text_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_text") %>
+          <%= settings_fields.text_field "link_url_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_url") %>
+          <%= settings_fields.text_field "text_color_#{i}", label: t("decidim.content_blocks.active_processes_settings_form.text_color"), type: "color" %>
+        <% end %>
+
+        <div class="organization-images">
+          <% form.fields_for :images, form.object.images do |images_fields| %>
+            <%= images_fields.upload "image_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.image") %>
+          <% end %>
+        </div>
+      </fieldset>
+    </div>
+  <% end %>
+  <fieldset class="fieldset">
+    <% form.fields_for :settings, form.object.settings do |settings_fields| %>
+      <%= settings_fields.translated :text_field, :button_text, label: t("decidim.content_blocks.active_processes_settings_form.button_text") %>
+      <%= settings_fields.text_field :button_url, label: t("decidim.content_blocks.active_processes_settings_form.button_url") %>
+    <% end %>
+  </fieldset>
+</div>
