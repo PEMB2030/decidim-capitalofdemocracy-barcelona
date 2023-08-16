@@ -1,6 +1,11 @@
 ---
 en:
   decidim:
+    conferences:
+      custom_conference_types:
+        city: City conferences
+        global: Globals conferences
+        parallel: Parallel conferences
     content_blocks:
       active_processes:
         name: Active processes
