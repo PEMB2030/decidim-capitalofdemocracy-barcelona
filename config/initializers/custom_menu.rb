@@ -4,6 +4,8 @@
 Decidim.menu :menu do |menu|
   custom_conference_types = Rails.application.secrets.custom_conference_types || []
   custom_conference_types.each do |item|
+    next unless Decidim::Conference.where(hashtag: item[:hashtag]).count.positive?
+
     options = {}
     options[:position] = item[:position].to_i if item[:position]
     options[:active] = item[:active].to_sym if item[:active]
