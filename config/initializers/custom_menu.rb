@@ -11,5 +11,3 @@ Decidim.menu :menu do |menu|
     menu.add_item item[:key], I18n.t(item[:key], scope: "decidim.conferences.custom_conference_types"), item[:url], options
   end
 end
-
-# Rails.configuration.middleware.use ConferencesScoper
