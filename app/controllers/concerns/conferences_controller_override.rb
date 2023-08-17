@@ -34,7 +34,7 @@ module ConferencesControllerOverride
     end
 
     def conferences_filtered_by_hashtag(conferences, hashtag)
-      conferences.query.where(hashtag: hashtag)
+      conferences.query."hashtag ILIKE ? OR hashtag ILIKE ?", "%##{hashtag}","%##{hashtag} %")
     end
   end
 end
