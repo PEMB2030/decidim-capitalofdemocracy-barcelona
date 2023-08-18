@@ -27,6 +27,7 @@ module DecidimCapitalitatDev
     config.to_prepare do
       Decidim::StatisticCell.include(Decidim::StatisticCellOverride)
       Decidim::Conferences::ConferencesController.include(ConferencesControllerOverride)
+      Decidim::Conference.include(ConferenceOverride)
     end
 
     initializer "decidim.core.homepage_content_blocks" do
