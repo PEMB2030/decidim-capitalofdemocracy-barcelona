@@ -26,15 +26,15 @@ module ConferencesControllerOverride
       @conferences ||= begin
         conferences = Decidim::Conferences::OrganizationPrioritizedConferences.new(current_organization, current_user)
         if current_hashtag
-          conferences_filtered_by_hashtag(conferences, current_hashtag)
+          conferences_filtered_by_hashtag(current_hashtag)
         else
           conferences
         end
       end
     end
 
-    def conferences_filtered_by_hashtag(conferences, hashtag)
-      conferences.query."hashtag ILIKE ? OR hashtag ILIKE ?", "%##{hashtag}","%##{hashtag} %")
+    def conferences_filtered_by_hashtag(hashtag)
+      Decidim::Conference.where("hashtag ILIKE ? OR hashtag ILIKE ?", "%#{hashtag}", "%##{hashtag} %")
     end
   end
 end
