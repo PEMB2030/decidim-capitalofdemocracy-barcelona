@@ -26,8 +26,8 @@ gem "wicked_pdf", "~> 2.1"
 gem "deface", ">= 1.9"
 
 group :development, :test do
-  gem "faker", "~> 2.14"
   gem "byebug", "~> 11.0", platform: :mri
+  gem "faker", "~> 2.14"
 
   gem "brakeman"
   gem "decidim-dev", DECIDIM_VERSION
@@ -36,9 +36,9 @@ end
 group :development do
   gem "letter_opener_web"
   gem "listen"
+  gem "rubocop-faker"
   gem "spring"
   gem "spring-watcher-listen"
-  gem "rubocop-faker"
   gem "web-console"
 end
 
