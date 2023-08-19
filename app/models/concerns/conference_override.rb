@@ -5,8 +5,7 @@ module ConferenceOverride
 
   included do
     def self.filtered_by_hashtag(hashtag)
-      where("hashtag ILIKE ? OR hashtag ILIKE ? OR hashtag ILIKE ? OR hashtag ILIKE ? OR hashtag ILIKE ? OR hashtag ILIKE ?",
-            "%#{hashtag}", "%##{hashtag}%", "% #{hashtag}", "%#{hashtag} ", "% ##{hashtag} %", "%#{hashtag.gsub(" ", "%")}%")
+      where("CONCAT(' ', hashtag, ' ') ILIKE CONCAT('% ', ?, ' %') OR CONCAT(' ', hashtag, ' ') ILIKE CONCAT('% #', ?, ' %')", hashtag, hashtag)
     end
   end
 end

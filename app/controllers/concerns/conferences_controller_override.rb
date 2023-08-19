@@ -12,30 +12,32 @@ module ConferencesControllerOverride
     end
 
     def published_conferences
-      @published_conferences ||= begin
-        conferences = Decidim::Conferences::OrganizationPublishedConferences.new(current_organization, current_user)
-
-        if current_hashtag
-          conferences_filtered_by_hashtag(conferences, current_hashtag)
-        else
-          conferences
-        end
-      end
+      @published_conferences ||= if current_hashtag
+                                   conferences_with_hashtag_filter(Decidim::Conferences::OrganizationPublishedConferences.new(current_organization, current_user))
+                                 else
+                                   Decidim::Conferences::OrganizationPublishedConferences.new(current_organization, current_user)
+                                 end
     end
 
     def conferences
-      @conferences ||= begin
-        conferences = Decidim::Conferences::OrganizationPrioritizedConferences.new(current_organization, current_user)
-        if current_hashtag
-          conferences_filtered_by_hashtag(conferences, current_hashtag)
-        else
-          conferences
-        end
-      end
+      @conferences ||= if current_hashtag
+                         conferences = Decidim::Conferences::OrganizationPrioritizedConferences.new(current_organization, current_user)
+                         conferences_with_hashtag_filter(conferences)
+                       else
+                         Decidim::Conferences::OrganizationPrioritizedConferences.new(current_organization, current_user)
+                       end
     end
 
-    def conferences_filtered_by_hashtag(conferences, hashtag)
-      conferences.query.merge(Decidim::Conference.filtered_by_hashtag(hashtag))
+    def promoted_conferences
+      @promoted_conferences ||= current_hashtag ? promoted_filtered_by_hashtag(conferences) : Decidim::Conference.promoted
+    end
+
+    def promoted_filtered_by_hashtag(conferences)
+      conferences.merge(Decidim::Conference.promoted.filtered_by_hashtag(current_hashtag))
+    end
+
+    def conferences_with_hashtag_filter(conferences)
+      conferences.query.merge(Decidim::Conference.filtered_by_hashtag(current_hashtag))
     end
   end
 end

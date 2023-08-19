@@ -4,9 +4,9 @@ require "rails_helper"
 
 describe "Visit conferences", type: :system do
   let!(:organization) { create :organization }
-  let!(:conference_city) { create :conference, :published, organization: organization, hashtag: hashtag_city }
-  let!(:conference_global) { create :conference, :published, organization: organization, hashtag: hashtag_global }
-  let!(:conference_parallel) { create :conference, :published, organization: organization, hashtag: hashtag_parallel }
+  let!(:conference_city) { create :conference, :published, :promoted, organization: organization, hashtag: hashtag_city }
+  let!(:conference_global) { create :conference, :published, :promoted, organization: organization, hashtag: hashtag_global }
+  let!(:conference_parallel) { create :conference, :published, :promoted, organization: organization, hashtag: hashtag_parallel }
   let(:hashtag_global) { "actesglobals" }
   let(:hashtag_parallel) { "actesparalels" }
 
@@ -37,6 +37,9 @@ describe "Visit conferences", type: :system do
       click_link "City conferences"
 
       expect(page).to have_content("1 CONFERENCE")
+      expect(page).to have_content(conference_city.title["en"])
+      expect(page).not_to have_content(conference_global.title["en"])
+      expect(page).not_to have_content(conference_parallel.title["en"])
     end
 
     it "shows the global conference menu" do
@@ -48,6 +51,9 @@ describe "Visit conferences", type: :system do
       click_link "Global conferences"
 
       expect(page).to have_content("1 CONFERENCE")
+      expect(page).to have_content(conference_global.title["en"])
+      expect(page).not_to have_content(conference_city.title["en"])
+      expect(page).not_to have_content(conference_parallel.title["en"])
     end
 
     it "shows the parallel conference menu" do
@@ -59,6 +65,9 @@ describe "Visit conferences", type: :system do
       click_link "Parallel conferences"
 
       expect(page).to have_content("1 CONFERENCE")
+      expect(page).to have_content(conference_parallel.title["en"])
+      expect(page).not_to have_content(conference_city.title["en"])
+      expect(page).not_to have_content(conference_global.title["en"])
     end
   end
 
@@ -97,6 +106,9 @@ describe "Visit conferences", type: :system do
       click_link "City conferences"
 
       expect(page).to have_content("1 CONFERENCE")
+      expect(page).to have_content(conference_city.title["en"])
+      expect(page).not_to have_content(conference_global.title["en"])
+      expect(page).not_to have_content(conference_parallel.title["en"])
     end
   end
 end
