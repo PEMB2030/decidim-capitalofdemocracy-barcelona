@@ -37,21 +37,21 @@ describe "Visit conferences", type: :system do
       click_link "City conferences"
 
       expect(page).to have_content("1 CONFERENCE")
-      expect(page).to have_content(conference_city.title["en"])
+      expect(page).to have_content(conference_city.title["en"], count: 2)
       expect(page).not_to have_content(conference_global.title["en"])
       expect(page).not_to have_content(conference_parallel.title["en"])
     end
 
     it "shows the global conference menu" do
       within ".main-nav" do
-        expect(page).to have_content("Global conferences")
-        expect(page).to have_link(href: "/conferences/global")
+        expect(page).to have_content("Conferences")
+        expect(page).to have_link(href: "/conferences")
       end
 
-      click_link "Global conferences"
+      click_link "Conferences"
 
       expect(page).to have_content("1 CONFERENCE")
-      expect(page).to have_content(conference_global.title["en"])
+      expect(page).to have_content(conference_global.title["en"], count: 2)
       expect(page).not_to have_content(conference_city.title["en"])
       expect(page).not_to have_content(conference_parallel.title["en"])
     end
@@ -65,7 +65,7 @@ describe "Visit conferences", type: :system do
       click_link "Parallel conferences"
 
       expect(page).to have_content("1 CONFERENCE")
-      expect(page).to have_content(conference_parallel.title["en"])
+      expect(page).to have_content(conference_parallel.title["en"], count: 2)
       expect(page).not_to have_content(conference_city.title["en"])
       expect(page).not_to have_content(conference_global.title["en"])
     end
