@@ -18,7 +18,7 @@ module ConferencesControllerOverride
       @conferences ||= conferences_query(Decidim::Conferences::OrganizationPrioritizedConferences)
     end
 
-    alias collection conferences
+    alias_method :collection, :conferences
 
     def promoted_conferences
       @promoted_conferences ||= hashtag_for_current_url ? promoted_filtered_by_hashtag(conferences) : promoted_conferences_without_custom_hashtag(Decidim::Conference.promoted)
@@ -41,7 +41,7 @@ module ConferencesControllerOverride
 
     def conferences_without_custom_hashtag(conferences)
       conferences.query.to_a.reject do |conference|
-        conference_hashtags = conference.hashtag.split(" ")
+        conference_hashtags = conference.hashtag.split
         (conference_hashtags & custom_hashtags).any?
       end
     end
@@ -52,7 +52,7 @@ module ConferencesControllerOverride
 
     def promoted_conferences_without_custom_hashtag(conferences)
       conferences.select do |conference|
-        conference_hashtags = conference.hashtag.split(" ")
+        conference_hashtags = conference.hashtag.split
         (conference_hashtags & custom_hashtags).empty?
       end
     end

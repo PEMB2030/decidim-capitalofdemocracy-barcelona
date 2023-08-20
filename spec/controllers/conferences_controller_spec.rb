@@ -18,19 +18,13 @@ module Decidim
 
       before do
         request.env["decidim.current_organization"] = organization
-        allow(Rails.application.secrets).to receive(:custom_conference_types).and_return(
-          [
-            {
-              url: "/conferences/city",
-              hashtag: "actesciutat"
-            }
-          ])
+        allow(Rails.application.secrets).to receive(:custom_conference_types).and_return([{ url: "/conferences/city", hashtag: "actesciutat" }])
       end
 
       describe "published_conferences" do
         context "when the custom hashtag exists" do
           before do
-            request.env['PATH_INFO'] = '/conferences/city'
+            request.env["PATH_INFO"] = "/conferences/city"
             get :index
           end
 
@@ -51,7 +45,7 @@ module Decidim
       describe "conferences" do
         context "when the custom hashtag exists" do
           before do
-            request.env['PATH_INFO'] = '/conferences/city'
+            request.env["PATH_INFO"] = "/conferences/city"
             get :index
           end
 
@@ -72,7 +66,7 @@ module Decidim
       describe "promoted_conferences" do
         context "when the custom hashtag exists" do
           before do
-            request.env['PATH_INFO'] = '/conferences/city'
+            request.env["PATH_INFO"] = "/conferences/city"
             get :index
           end
 
