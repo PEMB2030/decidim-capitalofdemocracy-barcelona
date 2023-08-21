@@ -19,6 +19,10 @@ Rails.application.config.to_prepare do
   Decidim::Conference.include(ConferenceOverride)
 end
 
+Rails.application.config.after_initialize do
+  Decidim::Conferences::ConferencesController.include(ConferencesControllerOverride)
+end
+
 Rails.application.config do
   initializer "capitalitat.homepage_content_blocks" do
     config.to_prepare do
@@ -67,12 +71,6 @@ Rails.application.config do
 
         content_block.default!
       end
-    end
-  end
-
-  initializer "capitalitat.controller_overrides", after: "decidim.action_controller" do
-    config.to_prepare do
-      Decidim::Conferences::ConferencesController.include(ConferencesControllerOverride)
     end
   end
 end
