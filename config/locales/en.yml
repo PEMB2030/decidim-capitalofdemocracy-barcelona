@@ -4,7 +4,6 @@ en:
     conferences:
       custom_conference_types:
         city: City conferences
-        global: Global conferences
         parallel: Parallel conferences
     content_blocks:
       active_processes:
