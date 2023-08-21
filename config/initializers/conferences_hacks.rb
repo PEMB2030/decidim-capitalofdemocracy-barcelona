@@ -17,7 +17,6 @@ end
 Rails.application.config.to_prepare do
   Decidim::StatisticCell.include(Decidim::StatisticCellOverride)
   Decidim::Conference.include(ConferenceOverride)
-  Decidim::Conferences::ConferencesController.include(ConferencesControllerOverride)
 end
 
 Rails.application.config do
@@ -73,7 +72,7 @@ Rails.application.config do
 
   initializer "capitalitat.controller_overrides", after: "decidim.action_controller" do
     config.to_prepare do
-      Decidim::Conference.include(ConferenceOverride)
+      Decidim::Conferences::ConferencesController.include(ConferencesControllerOverride)
     end
   end
 end
