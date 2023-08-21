@@ -25,7 +25,7 @@ RSpec.describe ConferenceOverride, type: :model do
         create(:conference, organization: organization, hashtag: "cityofdreams"),
         create(:conference, organization: organization, hashtag: "#cityofdreams"),
         create(:conference, organization: organization, hashtag: "my cityofdreams is missing"),
-        create(:conference, organization: organization, hashtag: "my #cityofdreams is missing"),
+        create(:conference, organization: organization, hashtag: "my #cityofdreams is missing")
       ]
     end
 
