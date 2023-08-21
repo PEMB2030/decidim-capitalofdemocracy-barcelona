@@ -44,3 +44,5 @@ yarn-debug.log*
 .rbenv-vars
 public/decidim-packs
 public/sw.js*
+coverage/*
+.rspec-*
