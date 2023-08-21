@@ -12,5 +12,11 @@ Rails.application.routes.draw do
     resources :iframe, only: [:index]
   end
 
+  scope module: "decidim/conferences" do
+    Rails.application.secrets.custom_conference_types.each do |item|
+      get item[:url], to: "conferences#index"
+    end
+  end
+
   mount Decidim::Core::Engine => "/"
 end
