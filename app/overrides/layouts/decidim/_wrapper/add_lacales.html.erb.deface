@@ -1,3 +1,3 @@
 <!-- insert_before "div.hide-for-medium[data-set='nav-holder']" -->
 
-<%= render partial: "layouts/decidim/locales_list", locals: {available_locales: available_locales} %>
+<%= render partial: "layouts/capitalitat/locales_list", locals: {available_locales: available_locales} %>

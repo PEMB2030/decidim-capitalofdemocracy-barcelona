@@ -1,8 +1,6 @@
 <% if organization.logo.attached? %>
   <%= link_to decidim.root_url(host: organization.host), class: "flex--cc", "aria-label": t("front_page_link", scope: "decidim.accessibility") do %>
     <%= image_tag organization.attached_uploader(:logo).variant_path(:medium), alt: t("logo", scope: 'decidim.accessibility', organization: organization.name) %>
-<!--    <p class="header__logo-title"><%#= t(".logo_title") %></p>-->
-    <p class="header__logo-title city"><%= t(".logo_city") %> 2023–2024</p>
   <% end %>
 <% else %>
   <span class="header__organization-name"><%= organization.name %></span>
