@@ -4,6 +4,9 @@ module ConferencesControllerOverride
   extend ActiveSupport::Concern
 
   included do
+
+    private
+
     def hashtag_for_current_url
       @hashtag_for_current_url ||= Rails.application.secrets.custom_conference_types.find do |item|
         item[:url] == request.path
@@ -23,8 +26,6 @@ module ConferencesControllerOverride
     def promoted_conferences
       @promoted_conferences ||= hashtag_for_current_url ? promoted_filtered_by_hashtag(conferences) : promoted_conferences_without_custom_hashtag(Decidim::Conference.promoted)
     end
-
-    private
 
     def custom_hashtags
       @custom_hashtags ||= Rails.application.secrets.custom_conference_types.map { |item| item[:hashtag] }
