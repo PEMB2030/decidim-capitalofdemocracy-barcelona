@@ -1,0 +1,8 @@
+<!-- insert_after "erb[loud]:contains('decidim/conferences/order_by_conferences')" -->
+
+<div class="flex flex--sc mb-s">
+  <% custom_conference_types = Rails.application.secrets.custom_conference_types || [] %>
+  <% custom_conference_types.each do |item| %>
+    <%= link_to I18n.t(item[:key], scope: "decidim.conferences.custom_conference_types"), item[:url], class: "card__button button button--sc #{item[:key].parameterize}" %>
+  <% end %>
+</div>
