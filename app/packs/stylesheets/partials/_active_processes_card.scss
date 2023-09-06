@@ -16,7 +16,7 @@
   .section-heading {
     position: relative;
     margin-left: 1.5rem;
-    color: $violet;
+    color: $cpb-violet;
   }
 
   .section-heading::after {
@@ -26,7 +26,7 @@
     top: 6px;
     width: 10px;
     height: 10px;
-    border: solid $violet;
+    border: solid $cpb-violet;
     border-width: 0 2px 2px 0;
     transform: rotate(-45deg);
   }
