@@ -1,11 +1,16 @@
-$cpb-violet: #524F9F;
-$cpb-rose: #E670A6;
-$cpb-blue: #3397D9;
-$cpb-brown: #5E3836;
-$cpb-red: #E33B29;
-$cpb-orange: #EB7329;
+$capitalitat-violet: #524F9F;
+$capitalitat-rose: #E670A6;
+$capitalitat-blue: #3397D9;
+$capitalitat-brown: #5E3836;
+$capitalitat-red: #E33B29;
+$capitalitat-orange: #EB7329;
 $black-font: #000;
 $grey-color: #EDEDED;
+$classes-colors: (
+        city: $capitalitat-rose,
+        international: $capitalitat-blue,
+        activity: $capitalitat-orange
+);
 
 @font-face {
   font-family: 'Inter';
@@ -33,4 +38,22 @@ $grey-color: #EDEDED;
   src: url("fonts/GalanoGrotesque-SemiBold.woff2") format('woff2');
   font-style: normal;
   font-weight: 600;
+}
+
+@mixin button-styles($color) {
+  background-color: $color;
+  color: white;
+}
+
+@mixin card-styles($color) {
+  border: 1px solid $color;
+}
+
+@mixin card-support-styles($color) {
+  background-color: $color;
+}
+
+@mixin link-styles($color) {
+  background-color: white;
+  color: $capitalitat-violet;
 }

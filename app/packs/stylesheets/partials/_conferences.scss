@@ -1,0 +1,25 @@
+@each $class, $color in $classes-colors {
+  .button.#{$class} {
+    @include button-styles($color);
+  }
+
+  .button.active-btn {
+    opacity: 1;
+  }
+
+  .button.inactive-btn {
+    opacity: 0.5;
+  }
+
+  .card.card--conference.#{$class} {
+    @include card-styles($color);
+  }
+
+  .card__support.#{$class} {
+    @include card-support-styles($color);
+
+    .conference-button {
+      @include link-styles($color);
+    }
+  }
+}
