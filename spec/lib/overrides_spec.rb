@@ -10,13 +10,15 @@ checksums = [
     package: "decidim-conferences",
     files: {
       "/app/controllers/decidim/conferences/conferences_controller.rb" => "797899ada946b487a3c8c7312f0c14eb",
-      "/app/models/decidim/conference.rb" => "8d7b097f3dc4d626b6972f380332b713"
+      "/app/models/decidim/conference.rb" => "8d7b097f3dc4d626b6972f380332b713",
+      "/app/cells/decidim/conferences/conference_m_cell.rb" => "d2b5f21f279c9464230244dea2287098"
     }
   },
   {
     package: "decidim-core",
     files: {
-      "/app/cells/decidim/statistic_cell.rb" => "b6f5eb0ab09653dc5633656b84fc2f7b"
+      "/app/cells/decidim/statistic_cell.rb" => "b6f5eb0ab09653dc5633656b84fc2f7b",
+      "/app/cells/decidim/card_m_cell.rb" => "e86e59070ff3bd11f65208a2f32936f3"
     }
   }
 ]
