@@ -1,18 +1,17 @@
-.city {
-  background-color: $capitalitat-rose !important;
-  color: white !important;
-}
+@each $class, $color in $classes-colors {
+  .button.#{$class} {
+    @include button-styles($color);
+  }
 
-.global {
-  background-color: $capitalitat-blue !important;
-  color: white !important;
-}
+  .card.card--conference.#{$class} {
+    @include card-styles($color);
+  }
 
-.parallel {
-  background-color: $capitalitat-orange !important;
-  color: white !important;
-}
+  .card__support.#{$class} {
+    @include card-support-styles($color);
 
-//.card.card--conference {
-//  border: 1px solid $capitalitat-blue !important;
-//}
+    .conference-button {
+      @include link-styles($color);
+    }
+  }
+}

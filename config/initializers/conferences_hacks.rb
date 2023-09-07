@@ -2,6 +2,8 @@
 
 Rails.application.config.to_prepare do
   Decidim::StatisticCell.include(Decidim::StatisticCellOverride)
+  Decidim::CardMCell.include(Decidim::CardMCellOverride)
+  Decidim::Conferences::ConferenceMCell.include(Decidim::ConferenceMCellOverride)
   Decidim::Conference.include(ConferenceOverride)
 end
 
