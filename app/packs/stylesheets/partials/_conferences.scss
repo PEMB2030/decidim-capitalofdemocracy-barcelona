@@ -3,6 +3,14 @@
     @include button-styles($color);
   }
 
+  .button.active-btn {
+    opacity: 1;
+  }
+
+  .button.inactive-btn {
+    opacity: 0.5;
+  }
+
   .card.card--conference.#{$class} {
     @include card-styles($color);
   }

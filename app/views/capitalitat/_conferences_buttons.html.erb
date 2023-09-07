@@ -1,10 +1,16 @@
 <div class="flex flex--sc mb-s">
   <% custom_conference_types = Rails.application.secrets.custom_conference_types || [] %>
+  <% current_type = params[:type] %>
+  <% all_active = current_type.blank? %>
+
   <% custom_conference_types.each do |item| %>
     <% hashtag = item[:hashtag] %>
     <% if Decidim::Conference.exists?(Decidim::Conference.filtered_by_hashtag(hashtag)) %>
+      <% is_active = all_active || current_type == item[:key] %>
+
       <%= link_to I18n.t(item[:key], scope: "decidim.conferences.custom_conference_types"),
-                  conferences_path(type: item[:key]), class: "button button--sc #{item[:key]} conference-button" %>
+                  conferences_path(type: item[:key]),
+                  class: "button button--sc #{item[:key]} conference-button #{is_active ? 'active-btn' : 'inactive-btn'}" %>
     <% end %>
   <% end %>
 </div>
