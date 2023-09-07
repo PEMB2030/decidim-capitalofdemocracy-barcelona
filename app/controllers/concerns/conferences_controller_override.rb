@@ -6,12 +6,13 @@ module ConferencesControllerOverride
   included do
     private
 
-    def hashtag_for_current_url
-      @hashtag_for_current_url ||= find_hashtag_for_current_url
+    def hashtag_for_current_type
+      @hashtag_for_current_type ||= find_hashtag_for_current_type
     end
 
-    def find_hashtag_for_current_url
-      Rails.application.secrets.custom_conference_types.find { |item| item[:url] == request.path }&.dig(:hashtag)
+    def find_hashtag_for_current_type
+      type = params[:type]
+      Rails.application.secrets.custom_conference_types.find { |item| item[:key] == type }&.dig(:hashtag)
     end
 
     def published_conferences
@@ -32,7 +33,7 @@ module ConferencesControllerOverride
 
     def conferences_query(conference_class)
       conference_class.new(current_organization, current_user).query.tap do |query|
-        query.merge!(Decidim::Conference.filtered_by_hashtag(hashtag_for_current_url)) if hashtag_for_current_url
+        query.merge!(Decidim::Conference.filtered_by_hashtag(hashtag_for_current_type)) if hashtag_for_current_type
       end
     end
   end

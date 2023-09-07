@@ -3,9 +3,9 @@ en:
   decidim:
     conferences:
       custom_conference_types:
-        city: City conferences
-        global: Global conferences
-        parallel: Parallel conferences
+        city: City acts
+        international: International acts
+        activity: Parallel activities
     content_blocks:
       active_processes:
         name: Active processes
