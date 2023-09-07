@@ -1,0 +1,3 @@
+<!-- insert_after "erb[loud]:contains('decidim/conferences/order_by_conferences')" -->
+
+<%= render partial: "capitalitat/conferences_buttons" %>
