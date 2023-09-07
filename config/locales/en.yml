@@ -19,6 +19,8 @@ en:
         text_color: Text color
       extended_hero:
         name: Extended hero
+      promo_video:
+        name: Promo video
       extended_hero_settings_form:
         background_image: Background image
         subtitle: Subtitle
