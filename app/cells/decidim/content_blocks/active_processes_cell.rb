@@ -7,6 +7,19 @@ module Decidim
         render
       end
 
+      def items
+        (1..3).filter_map do |i|
+          next if link_url(i).blank?
+
+          {
+            link_url: link_url(i),
+            link_text: link_text(i),
+            image_url: image_url_for(i),
+            text_color: text_color(i)
+          }
+        end
+      end
+
       def link_url(attribute)
         model.settings["link_url_#{attribute}"]
       end
@@ -30,7 +43,7 @@ module Decidim
       end
 
       def button
-        return unless button_text && button_url
+        return unless button_text.present? && button_url.present?
 
         link_to button_text, button_url, class: "button hollow"
       end
