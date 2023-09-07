@@ -1,17 +1,22 @@
+.promo-video {
+  background-color: $cpb-violet;
+  padding: 4rem 0;
+  @media print, screen and (max-width: 40em) {
+    padding: 0;
+  }
+}
+
 .democracy-innovation {
   background-color: $cpb-violet;
   padding: 4rem 0;
-}
-
-.democracy-innovation .button {
-color: #ffffff;
-  border-color: #fff;
-}
-
-.democracy-innovation {
   color: #ffffff;
-}
-
-.democracy-innovation .heading3 {
-  margin-bottom: 2rem;
+  
+  .button {
+    color: #ffffff;
+    border-color: #fff;
+  }
+  
+  .heading3 {
+    margin-bottom: 2rem;
+  }
 }
