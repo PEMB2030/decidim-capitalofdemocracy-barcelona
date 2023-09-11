@@ -1,0 +1,42 @@
+---
+ca:
+  decidim:
+    conferences:
+      custom_conference_types:
+        activity: Activitats Paral·leles
+        city: Actes de la ciutat
+        international: Actes internacionals
+    content_blocks:
+      active_processes:
+        name: Processos actius
+        title: Processos actius
+      active_processes_settings_form:
+        button_text: Text del botó
+        button_url: URL del botó
+        image: Imatge de la targeta
+        link_text: Text del vincle
+        link_url: URL del vincle
+        text_color: Color del text
+      extended_hero:
+        name: Hero ampliat
+      promo_video:
+        name: Vídeo promocional
+      extended_hero_settings_form:
+        background_image: Imatge de fons
+        subtitle: Subtítol
+        welcome_text: Títol de benvinguda
+  layouts:
+    decidim:
+      footer:
+        cookie_settings: Configuració de galetes
+        made_with_open_source: Lloc web fet amb <a target="_blank" href="https://github.com/decidim/decidim">programari lliure</a>
+      header_logo:
+        logo_city: Barcelona
+        logo_title: Capital Europea de la Democràcia
+      main_footer:
+        logo_title: Capital Europea de la Democràcia
+  locale:
+    locale_name:
+      ca: cat
+      en: eng
+      es: es
