@@ -19,6 +19,9 @@ en:
         text_color: Text color
       extended_hero:
         name: Extended hero
+      partner_logos:
+        name: Partner logos
+        title: Partners
       promo_video:
         name: Promo video
       extended_hero_settings_form:

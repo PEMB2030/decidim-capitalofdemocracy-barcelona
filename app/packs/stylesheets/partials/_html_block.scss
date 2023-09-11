@@ -10,13 +10,27 @@
   background-color: $capitalitat-violet;
   padding: 4rem 0;
   color: #ffffff;
-  
+
   .button {
     color: #ffffff;
     border-color: #fff;
   }
-  
+
   .heading3 {
     margin-bottom: 2rem;
+  }
+}
+
+#partner-logos {
+  .column img {
+    height: 70px;
+  }
+  .column {
+    @media print, screen and (max-width: 40em) {
+      margin-top: 2rem;
+      img {
+        height: 50px;
+      }
+    }
   }
 }
