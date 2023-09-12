@@ -7,7 +7,7 @@ module Decidim
         render
       end
 
-      def partner_images
+      def partner_images(row)
         image_directory = Rails.public_path.join("partner_logos")
         Dir["#{image_directory}/*.png"].map do |file_path|
           "/partner_logos/#{File.basename(file_path)}"

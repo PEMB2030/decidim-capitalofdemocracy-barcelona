@@ -21,7 +21,9 @@ en:
         name: Extended hero
       partner_logos:
         name: Partner logos
-        title: Partners
+        title1: An initiative of
+        title2: Supported by
+        title3: In collaboration with
       promo_video:
         name: Promo video
       extended_hero_settings_form:
