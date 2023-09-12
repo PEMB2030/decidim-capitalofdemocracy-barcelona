@@ -1,3 +1,5 @@
-<!-- insert_after "erb[loud]:contains('decidim/conferences/order_by_conferences')" -->
+<!-- insert_after "erb[loud]:contains('participatory_space_wrapper do')" -->
 
-<%= render partial: "capitalitat/conferences_buttons" %>
+<section id="conferences-filter" class="row collapse">
+	<%= render partial: "capitalitat/conferences_buttons" %>
+</section>

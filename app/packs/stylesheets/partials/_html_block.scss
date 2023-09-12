@@ -42,4 +42,13 @@
       }
     }
   }
+  .full-height {
+    .column {
+      padding-right: 2rem;
+      padding-left: 2rem;
+      img {
+        height: auto;
+      }
+    }
+  }
 }
