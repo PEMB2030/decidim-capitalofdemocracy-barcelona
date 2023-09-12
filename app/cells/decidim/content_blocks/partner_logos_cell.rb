@@ -11,7 +11,7 @@ module Decidim
         dir = "partners#{row}/"
         image_directory = Rails.public_path.join(dir.to_s)
         Dir["#{image_directory}/*.png"].map do |file_path|
-          "/#{dir}/#{File.basename(file_path)}"
+          "/#{dir}#{File.basename(file_path)}"
         end
       end
 
