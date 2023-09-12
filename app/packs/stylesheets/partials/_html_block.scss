@@ -1,5 +1,5 @@
 .promo-video {
-  background-color: $capitalitat-violet;
+  background-color: $capitalitat-violet !important;
   padding: 4rem 0;
   @media print, screen and (max-width: 40em) {
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 .democracy-innovation {
-  background-color: $capitalitat-violet;
+  background-color: $capitalitat-violet !important;
   padding: 4rem 0;
   color: #ffffff;
 
@@ -21,7 +21,16 @@
   }
 }
 
-#partner-logos {
+.partner-logos {
+  h2 {
+    color: #fff;
+  }
+  .home-bullets {
+    .column {
+      margin: 2rem 0;
+    }
+  }
+  background-color: $capitalitat-violet !important;
   .column img {
     height: 70px;
   }

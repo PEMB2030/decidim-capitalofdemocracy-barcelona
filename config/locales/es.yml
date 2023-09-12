@@ -19,6 +19,11 @@ es:
         text_color: Color del texto
       extended_hero:
         name: Héroe extendido
+      partner_logos:
+        name: Logos de partners
+        title1: Una iniciativa de
+        title2: Con el apoyo de
+        title3: Con la colaboración de
       promo_video:
         name: Vídeo promocional
       extended_hero_settings_form:

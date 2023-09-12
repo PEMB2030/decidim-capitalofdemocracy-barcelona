@@ -1,23 +1,25 @@
 <section id="partner-logos" class="extended home-section partner-logos">
   <div class="wrapper-home">
     <div class="row column text-center">
-      <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title") %></h2>
-      <div class="row small-up-1 medium-up-3 home-bullets">
-        <% partner_images(1).each do |image_path| %>
+      <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
+      <div class="row small-up-1 medium-up-<%= [first_row.size, 3].min %> home-bullets">
+        <% first_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>
           </div>
         <% end %>
       </div>
-      <div class="row small-up-1 medium-up-3 home-bullets">
-        <% partner_images(2).each do |image_path| %>
+      <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title2") %></h2>
+      <div class="row small-up-1 medium-up-<%= [second_row.size, 3].min %> home-bullets">
+        <% second_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>
           </div>
         <% end %>
       </div>
-      <div class="row small-up-1 medium-up-3 home-bullets">
-        <% partner_images(3).each do |image_path| %>
+      <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title3") %></h2>
+      <div class="row small-up-1 medium-up-<%= [third_row.size, 3].min %> home-bullets">
+        <% third_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>
           </div>
