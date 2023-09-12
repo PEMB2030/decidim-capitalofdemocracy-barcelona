@@ -30,7 +30,6 @@ en:
         background_image: Background image
         subtitle: Subtitle
         welcome_text: Welcome title
-  hello: Hello world
   layouts:
     decidim:
       footer:
