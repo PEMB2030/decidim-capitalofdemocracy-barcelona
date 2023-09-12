@@ -7,7 +7,7 @@ module Decidim
         case I18n.locale
         when :en
           # change to "en" when available
-          "/ecod_ca.mp4"
+          "/ecod_en.mp4"
         else
           "/ecod_ca.mp4"
         end
