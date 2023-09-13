@@ -27,6 +27,10 @@ module ConferencesControllerOverride
       conferences
     end
 
+    def promoted_conferences
+      @promoted_conferences ||= conferences.promoted
+    end
+
     def custom_hashtags
       @custom_hashtags ||= Rails.application.secrets.custom_conference_types.map { |item| item[:hashtag] }
     end
