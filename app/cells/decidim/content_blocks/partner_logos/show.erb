@@ -2,7 +2,7 @@
   <div class="wrapper-home">
     <div class="row column text-center">
       <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
-      <div class="row small-up-1 medium-up-<%= [first_row.size, 3].min %> home-bullets full-height">
+      <div class="row small-up-1 medium-up-<%= [first_row.size, 3].min %> home-bullets">
         <% first_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>
