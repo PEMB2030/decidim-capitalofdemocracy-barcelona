@@ -2,7 +2,7 @@
   <div class="wrapper-home">
     <div class="row column text-center">
       <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
-      <div class="row small-up-1 medium-up-<%= [first_row.size, 3].min %> home-bullets">
+      <div class="row small-up-1 large-up-<%= [first_row.size, 6].min %> medium-up-<%= [first_row.size, 3].min %> home-bullets big-logos">
         <% first_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>
@@ -10,7 +10,7 @@
         <% end %>
       </div>
       <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title2") %></h2>
-      <div class="row small-up-1 medium-up-<%= [second_row.size, 3].min %> home-bullets">
+      <div class="row small-up-1 large-up-<%= [second_row.size, 6].min %> medium-up-<%= [second_row.size, 3].min %> home-bullets big-logos">
         <% second_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>
@@ -18,7 +18,7 @@
         <% end %>
       </div>
       <h2 class="heading3"><%= I18n.t(".decidim.content_blocks.partner_logos.title3") %></h2>
-      <div class="row small-up-1 medium-up-<%= [third_row.size, 3].min %> home-bullets">
+      <div class="row small-up-1 large-up-<%= [third_row.size, 6].min %> medium-up-<%= [third_row.size, 3].min %> home-bullets">
         <% third_row.each do |image_path| %>
           <div class="column">
             <%= image_tag image_path %>

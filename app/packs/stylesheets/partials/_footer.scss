@@ -1,3 +1,10 @@
+@media print, screen and (min-width: 64em) {
+  .main-footer__badge {
+    position: absolute;
+    top: -2rem;
+  }
+}
+
 .main-footer,
 .mini-footer {
   background-color: $capitalitat-violet !important;

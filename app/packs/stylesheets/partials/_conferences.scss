@@ -1,3 +1,10 @@
+#highlighted_conferences {
+  background-color: #fff !important;
+  .card {
+    border: none;
+  }
+}
+
 @each $class, $color in $classes-colors {
   .button.#{$class} {
     @include button-styles($color);
