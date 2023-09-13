@@ -2,6 +2,10 @@
 ca:
   decidim:
     conferences:
+      pages:
+        home:
+          highlighted_conferences:
+            active_conferences: Actes destacats
       custom_conference_types:
         activity: Activitats Paral·leles
         city: Actes de la ciutat

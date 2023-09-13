@@ -2,6 +2,10 @@
 en:
   decidim:
     conferences:
+      pages:
+        home:
+          highlighted_conferences:
+            active_conferences: Highlighted acts
       custom_conference_types:
         activity: Parallel activities
         city: City acts
