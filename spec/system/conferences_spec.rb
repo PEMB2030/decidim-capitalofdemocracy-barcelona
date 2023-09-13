@@ -30,7 +30,7 @@ describe "Visit conferences", type: :system do
     it "shows the #{type} conference link and its content" do
       expected_text = I18n.t("decidim.conferences.custom_conference_types.#{type}")
 
-      within "#conferences-grid" do
+      within "#conferences-filter" do
         expect(page).to have_link(text: /#{expected_text}/i)
       end
 
@@ -42,7 +42,7 @@ describe "Visit conferences", type: :system do
   end
 
   describe "Checking each conference type link" do
-    conference_types_local = %w(activity city international)
+    conference_types_local = %w(city international activity)
 
     conference_types_local.each do |type|
       it_behaves_like "checks the conference link", type
