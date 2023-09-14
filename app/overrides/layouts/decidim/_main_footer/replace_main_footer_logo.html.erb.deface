@@ -11,10 +11,14 @@
     <div class="main-footer__content flex--sbc column">
       <div class="logos flex--sbc">
         <div class="footer-logo">
-          <%= image_pack_tag("media/images/logo_capitalitat.png") %>
+          <%= link_to "https://capitalofdemocracy.eu/" do %>
+            <%= image_pack_tag("media/images/logo_capitalitat.png") %>
+          <% end %>
         </div>
         <div class="footer-logo">
-          <%= image_pack_tag("media/images/logo_footer_2.png") %>
+          <%= link_to "https://compromismetropolita.cat/" do %>
+            <%=image_pack_tag("media/images/logo_footer_2.png") %>
+          <% end %>
         </div>
       </div>
       <%= render partial: "layouts/decidim/social_media_links" %>
