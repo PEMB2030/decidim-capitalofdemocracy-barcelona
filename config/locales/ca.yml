@@ -37,6 +37,7 @@ ca:
   layouts:
     decidim:
       footer:
+        accessibility: Accessibilitat
         cookie_settings: Configuració de galetes
         made_with_open_source: Lloc web fet amb <a target="_blank" href="https://github.com/decidim/decidim">programari lliure</a>
       header_logo:
