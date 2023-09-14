@@ -1,7 +1,7 @@
 @media print, screen and (min-width: 64em) {
   .main-footer__badge {
     position: absolute;
-    top: -2rem;
+    top: -3rem;
   }
 }
 
@@ -44,7 +44,9 @@
   .footer-logo {
     margin-right: 1rem;
     display: block;
-    width: 140px;
+    img {
+      height: 50px;
+    }
   }
 }
 
