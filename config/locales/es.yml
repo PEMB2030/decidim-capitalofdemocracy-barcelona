@@ -38,6 +38,7 @@ es:
   layouts:
     decidim:
       footer:
+        accessibility: Accesibilidad
         cookie_settings: Configuración de cookies
         made_with_open_source: Sitio web hecho con <a target="_blank" href="https://github.com/decidim/decidim">software libre</a>
       header_logo:
