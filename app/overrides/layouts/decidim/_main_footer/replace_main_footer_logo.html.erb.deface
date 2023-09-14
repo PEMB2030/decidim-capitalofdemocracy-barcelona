@@ -1,9 +1,8 @@
-<!-- original "25277dbf8f6306c2d1703a6fe82abf2be777fc7a" -->
 <!-- replace ".main-footer" -->
 
 <div class="main-footer">
   <% if current_organization && current_organization.official_img_footer.attached? %>
-    <%= link_to current_organization.official_url, class: "main-footer__badge" do %>
+    <%= link_to "https://ajuntament.barcelona.cat", class: "main-footer__badge" do %>
       <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
     <% end %>
   <% end %>
@@ -11,12 +10,12 @@
     <div class="main-footer__content flex--sbc column">
       <div class="logos flex--sbc">
         <div class="footer-logo">
-          <%= link_to "https://capitalofdemocracy.eu/" do %>
+          <%= link_to "https://capitalofdemocracy.eu/", target: "_blank" do %>
             <%= image_pack_tag("media/images/logo_capitalitat.png") %>
           <% end %>
         </div>
         <div class="footer-logo">
-          <%= link_to "https://compromismetropolita.cat/" do %>
+          <%= link_to "https://compromismetropolita.cat/", target: "_blank" do %>
             <%=image_pack_tag("media/images/logo_footer_2.png") %>
           <% end %>
         </div>

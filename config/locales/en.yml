@@ -7,9 +7,9 @@ en:
           highlighted_conferences:
             active_conferences: Highlighted acts
       custom_conference_types:
-        activity: Parallel activities
+        activity: Side event
         city: City acts
-        international: International acts
+        international: Global acts
     content_blocks:
       active_processes:
         name: Active processes
@@ -37,6 +37,7 @@ en:
   layouts:
     decidim:
       footer:
+        accessibility: Accessibility
         cookie_settings: Cookie settings
         made_with_open_source: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free
           software</a>
