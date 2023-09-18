@@ -7,7 +7,7 @@ en:
           highlighted_conferences:
             active_conferences: Highlighted acts
       custom_conference_types:
-        activity: Side event
+        activity: Side events
         city: City acts
         international: Global acts
     content_blocks:
