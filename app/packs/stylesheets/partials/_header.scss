@@ -79,6 +79,9 @@
 
 .main-nav__link a {
   font-weight: bold;
+  &:hover {
+    background: transparent;
+  }
 }
 
 @media print, screen and (max-width: 40em) {
