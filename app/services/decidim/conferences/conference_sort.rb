@@ -8,13 +8,11 @@ module Decidim
       end
 
       def sort
-        @conferences.sort do |a, b|
-          if a.end_date < Date.current && b.end_date < Date.current
-            a.end_date <=> b.end_date
-          elsif a.end_date >= Date.current && b.end_date >= Date.current
-            a.start_date <=> b.start_date
+        @conferences.sort_by do |conference|
+          if conference.end_date < Date.current
+            [1, conference.end_date]
           else
-            a.end_date < Date.current ? 1 : -1
+            [0, conference.start_date]
           end
         end
       end
