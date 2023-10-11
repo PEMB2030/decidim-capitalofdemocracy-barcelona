@@ -24,7 +24,11 @@ module ConferencesControllerOverride
     end
 
     def collection
-      conferences
+      sorted_conferences
+    end
+
+    def sorted_conferences
+      Decidim::Conferences::ConferenceSort.new(conferences).sort
     end
 
     def promoted_conferences
