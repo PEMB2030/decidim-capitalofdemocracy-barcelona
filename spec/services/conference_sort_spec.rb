@@ -26,8 +26,8 @@ module Decidim::Conferences
         expect(subject).to eq([
                                 upcoming_conference_one,
                                 upcoming_conference_two,
-                                past_conference_two,
-                                past_conference_one
+                                past_conference_one,
+                                past_conference_two
                               ])
       end
     end
