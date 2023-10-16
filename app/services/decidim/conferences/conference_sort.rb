@@ -10,32 +10,32 @@ module Decidim
       attr_reader :collection
 
       def sort
-        converences.reorder(new_order)
+        conferences.reorder(new_order)
       end
 
       private
 
-      def converences
+      def conferences
         Conference.where(id: collection)
       end
 
       def new_order
-        Arel.sql("POSITION(id::text IN '#{sorted_ids.join(",")}')")
+        Arel.sql("array_position(ARRAY[#{sorted_ids.join(",")}], id::int)")
       end
 
       def sorted_ids
         [
-          *upcoming_converences_sorted.ids,
-          *past_converences_sorted.ids
+          *upcoming_conferences_sorted.ids,
+          *past_conferences_sorted.ids
         ]
       end
 
-      def upcoming_converences_sorted
-        converences.where(Conference.arel_table[:end_date].gteq(Time.current)).order(start_date: :asc)
+      def upcoming_conferences_sorted
+        conferences.upcoming.order(start_date: :asc)
       end
 
-      def past_converences_sorted
-        converences.where(Conference.arel_table[:end_date].lteq(Time.current)).order(end_date: :desc)
+      def past_conferences_sorted
+        conferences.past.order(end_date: :desc)
       end
     end
   end
