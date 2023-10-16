@@ -24,7 +24,7 @@ gem "puma", ">= 5.0.0"
 gem "wicked_pdf", "~> 2.1"
 
 gem "deface", ">= 1.9"
-gem 'omniauth-decidim'
+gem "omniauth-decidim"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
