@@ -1,6 +1,6 @@
 <% if organization.logo.attached? %>
   <%= link_to decidim.root_url(host: organization.host), class: "flex--cc", "aria-label": t("front_page_link", scope: "decidim.accessibility") do %>
-    <%= image_tag organization.attached_uploader(:logo).variant_path(:medium), alt: t("logo", scope: 'decidim.accessibility', organization: organization.name) %>
+    <%= image_tag asset_pack_path("media/images/logo_head.svg"), alt: t("logo", scope: 'decidim.accessibility', organization: organization.name) %>
   <% end %>
 <% else %>
   <span class="header__organization-name"><%= organization.name %></span>

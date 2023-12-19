@@ -1,6 +1,9 @@
 .logo-wrapper a.flex--cc {
   display: flex !important;
   font-family: Galano, sans-serif;
+  img {
+    height:45px;
+  }
 }
 
 .logo-wrapper a.flex--cc:hover {
