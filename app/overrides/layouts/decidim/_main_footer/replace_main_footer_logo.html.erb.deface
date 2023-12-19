@@ -15,7 +15,7 @@
           <% end %>
         </div>
         <div class="footer-logo">
-          <%= link_to "https://compromismetropolita.cat/", target: "_blank" do %>
+          <%= link_to "https://compromismetropolita.cat/ca/compromis-metropolita-2030#section-56", target: "_blank" do %>
             <%=image_pack_tag("media/images/logo_footer_2.png") %>
           <% end %>
         </div>
