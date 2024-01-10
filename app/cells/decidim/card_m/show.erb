@@ -6,6 +6,8 @@
     <div class="card__content">
       <%= render :header if has_header? %>
 
+      <%= render :tags %>
+
       <div class="card__text">
         <div class="card__text--paragraph">
           <%= render :badge if has_badge? %>
@@ -13,7 +15,6 @@
         </div>
       </div>
 
-      <%= render :tags %>
     </div>
 
     <%= render :data %>
