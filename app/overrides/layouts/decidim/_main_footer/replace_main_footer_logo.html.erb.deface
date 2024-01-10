@@ -11,12 +11,12 @@
       <div class="logos flex--sbc">
         <div class="footer-logo">
           <%= link_to "https://capitalofdemocracy.eu/", target: "_blank" do %>
-            <%= image_pack_tag("media/images/logo_capitalitat.png") %>
+            <%= image_pack_tag("media/images/logo_capitalitat_white.png") %>
           <% end %>
         </div>
         <div class="footer-logo">
           <%= link_to "https://compromismetropolita.cat/ca/compromis-metropolita-2030#section-56", target: "_blank" do %>
-            <%=image_pack_tag("media/images/logo_footer_2.png") %>
+            <%=image_pack_tag("media/images/logo_pemb_white.svg") %>
           <% end %>
         </div>
       </div>
