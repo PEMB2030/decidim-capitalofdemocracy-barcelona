@@ -6,7 +6,6 @@
 }
 
 .card-data__item—multiple {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -15,9 +14,16 @@
 }
 
 svg.icon--arrow-thin-right.icon.icon--big.muted {
-  width: 1.1em;
-  height: 1.1em;
-  margin: 0 1px;
+  width: 0.6em !important;
+  height: 0.6em !important;
+}
+
+.end-date-text {
+  margin-left: 5px;
+}
+
+.start-date-text {
+  margin-right: 5px;
 }
 
 @each $class, $color in $classes-colors {
