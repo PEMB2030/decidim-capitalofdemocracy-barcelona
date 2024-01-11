@@ -1,3 +1,24 @@
 <div class="card__block">
-  <%= cell("decidim/meetings/meeting_m", model).date %>
+    <div class="card__icondata">
+        <ul class="card-data">
+            <li class="card-data__item">
+                <%= icon "datetime", class: "icon--big", role: "img", aria_label: t("decidim.meetings.meetings.show.date") %>
+            </li>
+            <li class="card-data__item">
+                <div class="card-data__item—multiple">
+                    <div>
+                        <strong>
+                        <%= model.start_time %>
+                        </strong>
+                    </div>
+                    <svg aria-label="arrow-thin-right" role="img" aria-hidden="true" class="icon--arrow-thin-right icon icon--big muted"><title>arrow-thin-right</title><use href="/decidim-packs/media/images/icons-8973a21949776dfa1985.svg#icon-arrow-thin-right"></use></svg>
+                    <div>
+                        <strong>
+                            <%= model.end_time %>
+                        </strong>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

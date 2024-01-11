@@ -5,8 +5,19 @@
   }
 }
 
-strong.text-small {
-  display: none;
+.card-data__item—multiple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0.5rem;
+}
+
+svg.icon--arrow-thin-right.icon.icon--big.muted {
+  width: 1.1em;
+  height: 1.1em;
+  margin: 0 1px;
 }
 
 @each $class, $color in $classes-colors {
