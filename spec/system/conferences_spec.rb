@@ -4,13 +4,15 @@ require "rails_helper"
 
 describe "Visit conferences", type: :system do
   let!(:organization) { create :organization }
-  let!(:conference_activity) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_activity }
+  let!(:conference_activity) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_activity, start_date: start_date, end_date: end_date }
   let!(:conference_city) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_city }
-  let!(:conference_international) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_international }
+  let!(:conference_international) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_international, start_date: start_date, end_date: end_date }
 
   let(:hashtag_activity) { "activitat" }
   let(:hashtag_city) { "ciutat" }
   let(:hashtag_international) { "internacional" }
+  let(:start_date) { Date.parse("2024-01-25") }
+  let(:end_date) { Date.parse("2024-03-25") }
 
   let(:conferences) do
     {
@@ -59,5 +61,16 @@ describe "Visit conferences", type: :system do
     let!(:hashtag_city) { " ciutat " }
 
     it_behaves_like "checks the conference link", "city"
+  end
+
+  context "when conference has a date" do
+    it "shows the conference date as its content" do
+      expect(page).to have_content("25 JAN")
+      expect(page).to have_content("25 MAR")
+
+      within "#conferences-grid" do
+        expect(page).to have_css(".card__block", count: 3)
+      end
+    end
   end
 end
