@@ -60,4 +60,14 @@ describe "Visit conferences", type: :system do
 
     it_behaves_like "checks the conference link", "city"
   end
+
+  context "when conference has a date" do
+    it "shows the conference date as its content" do
+
+      within "#conferences-grid" do
+        expect(page).to have_css(".card__block", count: 3)
+      end
+      
+    end
+  end 
 end
