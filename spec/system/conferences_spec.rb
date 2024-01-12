@@ -11,8 +11,8 @@ describe "Visit conferences", type: :system do
   let(:hashtag_activity) { "activitat" }
   let(:hashtag_city) { "ciutat" }
   let(:hashtag_international) { "internacional" }
-  let(:start_date) { "25 JANUARY 2024" }
-  let(:end_date) { "25 MARCH 2024" }
+  let(:start_date) { Date.parse("2024-01-25") }
+  let(:end_date) { Date.parse("2024-03-25") }
 
   let(:conferences) do
     {
