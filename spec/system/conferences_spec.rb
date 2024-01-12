@@ -18,9 +18,7 @@ describe "Visit conferences", type: :system do
     {
       "activity" => conference_activity,
       "city" => conference_city,
-      "international" => conference_international,
-      "25 JAN" => start_date,
-      "25 MAR" => end_date
+      "international" => conference_international
     }
   end
 
