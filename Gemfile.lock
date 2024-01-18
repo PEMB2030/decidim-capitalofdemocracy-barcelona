@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
-  revision: 0ace13eb67cab7da8c14fabf7e9dfd62cf8c8444
+  revision: e6dc561b2f8b210fc318a54447315acf5e364715
   branch: fix/canodrom-template
   specs:
     decidim-newsletter_agenda (1.1.0)
@@ -277,8 +277,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.877.0)
-    aws-sdk-core (3.190.2)
+    aws-partitions (1.881.0)
+    aws-sdk-core (3.190.3)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
@@ -292,7 +292,7 @@ GEM
       aws-sigv4 (~> 1.8)
     aws-sigv4 (1.8.0)
       aws-eventstream (~> 1, >= 1.0.2)
-    axe-core-api (4.8.0)
+    axe-core-api (4.8.1)
       dumb_delegator
       virtus
     axe-core-rspec (4.1.0)
@@ -315,7 +315,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     bindex (0.8.1)
-    bootsnap (1.17.0)
+    bootsnap (1.17.1)
       msgpack (~> 1.2)
     brakeman (6.1.1)
       racc
@@ -364,7 +364,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     commonmarker (0.23.10)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crack (0.4.5)
       rexml
@@ -558,7 +558,7 @@ GEM
     mime-types-data (3.2023.1205)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
-    minitest (5.20.0)
+    minitest (5.21.2)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
@@ -631,7 +631,7 @@ GEM
     parallel (1.24.0)
     parallel_tests (3.13.0)
       parallel
-    parser (3.3.0.2)
+    parser (3.3.0.4)
       ast (~> 2.4.1)
       racc
     pg (1.1.4)
