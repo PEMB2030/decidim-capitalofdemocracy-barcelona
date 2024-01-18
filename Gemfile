@@ -14,7 +14,7 @@ gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
-gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda"
+gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda", branch: "fix/canodrom-template"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
 gem "bootsnap", "~> 1.7"
