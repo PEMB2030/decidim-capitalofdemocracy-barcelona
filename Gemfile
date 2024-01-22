@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "0.27-backports" }.freeze
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.28-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -28,7 +28,7 @@ gem "omniauth-decidim"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-  gem "faker", "~> 2.14"
+  gem "faker", "~> 3.2"
 
   gem "brakeman"
   gem "decidim-dev", DECIDIM_VERSION
