@@ -1,6 +1,13 @@
 {
   "name": "app",
   "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c .eslintrc.json --no-error-on-unmatched-pattern --ignore-pattern app/packs/vendor --ext .js app/packs",
+    "lint-fix": "eslint -c .eslintrc.json --ext .js app/packs/ --fix",
+    "stylelint": "stylelint app/packs/**/*.scss",
+    "stylelint-fix": "stylelint **/*.scss --fix"
+  },
   "dependencies": {
     "@decidim/browserslist-config": "^0.28.0",
     "@decidim/core": "^0.28.0",
@@ -28,13 +35,16 @@
     "postcss": "^8.4.33",
     "prettier": "2.8.8",
     "select2": "^4.1.0-rc.0",
-    "stylelint": "^15.3.0",
+    "stylelint": "^15.11.0",
     "stylelint-prettier": "^3.0.0",
     "webpack": "^5.89.0"
   },
   "engines": {
     "node": "18.17.1",
     "npm": ">=9.6.7"
+  },
+  "stylelint": {
+    "extends": "@decidim/stylelint-config"
   },
   "version": "0.1.0",
   "browserslist": [
@@ -51,14 +61,17 @@
     "@decidim/eslint-config": "^0.28.0",
     "@decidim/prettier-config": "^0.28.0",
     "@decidim/stylelint-config": "^0.28.0",
+    "@webpack-cli/serve": "^1.7.0",
     "eslint": "^8.7.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-standard": "^3.1.0",
     "postcss-scss": "^4.0.9",
+    "sass-embedded": "~1.57.1",
     "webpack-dev-server": "^4.15.1"
   }
 }
