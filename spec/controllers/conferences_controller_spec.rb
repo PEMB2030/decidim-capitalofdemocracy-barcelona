@@ -4,15 +4,15 @@ require "rails_helper"
 
 module Decidim
   module Conferences
-    describe ConferencesController, type: :controller do
+    describe ConferencesController do
       include ConferencesControllerOverride
       routes { Decidim::Conferences::Engine.routes }
 
       let(:organization) { create(:organization) }
 
-      let!(:published1) { create(:conference, :published, organization: organization, hashtag: "ciutat") }
-      let!(:published2) { create(:conference, :published, organization: organization, hashtag: "activitat") }
-      let!(:published3) { create(:conference, :published, organization: organization, hashtag: "internacional") }
+      let!(:published1) { create(:conference, :published, organization:, hashtag: "ciutat") }
+      let!(:published2) { create(:conference, :published, organization:, hashtag: "activitat") }
+      let!(:published3) { create(:conference, :published, organization:, hashtag: "internacional") }
 
       before do
         request.env["decidim.current_organization"] = organization
@@ -20,7 +20,7 @@ module Decidim
 
       describe "conferences" do
         it "includes published conferences" do
-          expect(controller.helpers.conferences).to match_array([published1, published2, published3])
+          expect(controller.helpers.conferences).to contain_exactly(published1, published2, published3)
         end
       end
 
@@ -30,7 +30,7 @@ module Decidim
         end
 
         it "includes only published conferences with hashtag ciutat" do
-          expect(controller.helpers.conferences).to match_array([published1])
+          expect(controller.helpers.conferences).to contain_exactly(published1)
         end
       end
 
@@ -40,7 +40,7 @@ module Decidim
         end
 
         it "includes only published conferences with hashtag activitat" do
-          expect(controller.helpers.conferences).to match_array([published2])
+          expect(controller.helpers.conferences).to contain_exactly(published2)
         end
       end
 
@@ -50,7 +50,7 @@ module Decidim
         end
 
         it "includes only published conferences with hashtag internacional" do
-          expect(controller.helpers.conferences).to match_array([published3])
+          expect(controller.helpers.conferences).to contain_exactly(published3)
         end
       end
     end

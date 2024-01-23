@@ -2,11 +2,11 @@
 
 require "rails_helper"
 
-describe "Visit conferences", type: :system do
-  let!(:organization) { create :organization }
-  let!(:conference_activity) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_activity, start_date: start_date, end_date: end_date }
-  let!(:conference_city) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_city }
-  let!(:conference_international) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_international, start_date: start_date, end_date: end_date }
+describe "Visit conferences" do
+  let!(:organization) { create(:organization) }
+  let!(:conference_activity) { create(:conference, :published, promoted: false, organization:, hashtag: hashtag_activity, start_date:, end_date:) }
+  let!(:conference_city) { create(:conference, :published, promoted: false, organization:, hashtag: hashtag_city) }
+  let!(:conference_international) { create(:conference, :published, promoted: false, organization:, hashtag: hashtag_international, start_date:, end_date:) }
 
   let(:hashtag_activity) { "activitat" }
   let(:hashtag_city) { "ciutat" }
@@ -25,7 +25,7 @@ describe "Visit conferences", type: :system do
   before do
     switch_to_host(organization.host)
     visit decidim.root_path
-    click_link "Conferences"
+    click_link_or_button "Conferences"
   end
 
   shared_examples "checks the conference link" do |type|
@@ -36,7 +36,7 @@ describe "Visit conferences", type: :system do
         expect(page).to have_link(text: /#{expected_text}/i)
       end
 
-      click_link expected_text
+      click_link_or_button expected_text
 
       expect(page).to have_content(conferences[type].title["en"])
       expect(page).to have_css(".card--conference", count: 1)
