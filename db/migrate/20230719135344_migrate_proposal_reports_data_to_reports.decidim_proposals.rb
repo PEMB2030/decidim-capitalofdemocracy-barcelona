@@ -19,7 +19,7 @@ class MigrateProposalReportsDataToReports < ActiveRecord::Migration[5.0]
     end
 
     drop_table :decidim_proposals_proposal_reports
-    remove_column :decidim_proposals_proposals, :report_count
+    change_table :decidim_proposals_proposals, bulk: true
     remove_column :decidim_proposals_proposals, :hidden_at
   end
 end

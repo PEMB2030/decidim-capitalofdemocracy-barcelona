@@ -3,9 +3,7 @@
 
 class AddExtraInfoToProcesses < ActiveRecord::Migration[5.0]
   def change
-    add_column :decidim_participatory_processes, :domain, :jsonb
-    add_column :decidim_participatory_processes, :end_date, :date
-    add_column :decidim_participatory_processes, :developer_group, :string
+    change_table :decidim_participatory_processes, bulk: true
     add_column :decidim_participatory_processes, :scope, :jsonb
   end
 end

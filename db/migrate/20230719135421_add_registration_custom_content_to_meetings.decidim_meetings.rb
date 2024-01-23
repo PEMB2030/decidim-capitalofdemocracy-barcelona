@@ -3,7 +3,7 @@
 
 class AddRegistrationCustomContentToMeetings < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_meetings_meetings, :customize_registration_email, :boolean, default: false, null: false
+    change_table :decidim_meetings_meetings, bulk: true
     add_column :decidim_meetings_meetings, :registration_email_custom_content, :jsonb
   end
 end

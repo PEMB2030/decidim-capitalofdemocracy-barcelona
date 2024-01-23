@@ -7,9 +7,7 @@ class RenameExtraInfoOnProcesses < ActiveRecord::Migration[5.0]
 
     rename_column :decidim_participatory_processes, :domain, :developer_group
 
-    add_column :decidim_participatory_processes, :local_area, :jsonb
-    add_column :decidim_participatory_processes, :target, :jsonb
-    add_column :decidim_participatory_processes, :participatory_scope, :jsonb
+    change_table :decidim_participatory_processes, bulk: true
     add_column :decidim_participatory_processes, :participatory_structure, :jsonb
   end
 end

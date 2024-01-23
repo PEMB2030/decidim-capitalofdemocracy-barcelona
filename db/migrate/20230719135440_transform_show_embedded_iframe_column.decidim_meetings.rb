@@ -9,7 +9,7 @@ class TransformShowEmbeddedIframeColumn < ActiveRecord::Migration[6.0]
   end
 
   def down
-    add_column :decidim_meetings_meetings, :show_embedded_iframe, :boolean, default: false
+    add_column :decidim_meetings_meetings, :show_embedded_iframe, :boolean, default: false, null: false
     execute "UPDATE decidim_meetings_meetings SET show_embedded_iframe = 't' WHERE iframe_embed_type = 1"
     remove_column :decidim_meetings_meetings, :iframe_embed_type
   end

@@ -3,9 +3,7 @@
 
 class AddDiplomaFieldsToConference < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_conferences, :signature_name, :string
-    add_column :decidim_conferences, :signature, :string
-    add_column :decidim_conferences, :main_logo, :string
+    change_table :decidim_conferences, bulk: true
     add_column :decidim_conferences, :sign_date, :date
     add_index :decidim_conferences, :sign_date
     add_column :decidim_conferences, :diploma_sent_at, :datetime

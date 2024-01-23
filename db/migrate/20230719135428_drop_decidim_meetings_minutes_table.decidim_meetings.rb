@@ -51,7 +51,7 @@ class DropDecidimMeetingsMinutesTable < ActiveRecord::Migration[6.0]
       t.jsonb :description
       t.string :video_url
       t.string :audio_url
-      t.boolean :visible
+      t.boolean :visible, default: false, null: false
 
       t.timestamps
     end

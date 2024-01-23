@@ -24,7 +24,7 @@ class MoveOrganizationFieldsToHeroContentBlock < ActiveRecord::Migration[5.2]
       content_block.save!
     end
 
-    remove_column :decidim_organizations, :welcome_text
+    change_table :decidim_organizations, bulk: true
     remove_column :decidim_organizations, :homepage_image
   end
 end

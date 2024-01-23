@@ -3,7 +3,7 @@
 
 class RemoveCommentAndRepliesNotificationsFromUsers < ActiveRecord::Migration[5.1]
   def change
-    remove_column :decidim_users, :comments_notifications
+    change_table :decidim_users, bulk: true
     remove_column :decidim_users, :replies_notifications
   end
 end
