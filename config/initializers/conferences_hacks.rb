@@ -3,10 +3,10 @@
 Rails.application.config.to_prepare do
   Decidim::Conferences::ContentBlocks::HighlightedConferencesCell.prepend(Decidim::Conferences::ContentBlocks::HighlightedConferencesCellOverride)
   Decidim::StatisticCell.include(Decidim::StatisticCellOverride)
-  Decidim::CardMCell.prepend(Decidim::CardMCellOverride)
-  Decidim::CardMCell.include(Decidim::ConferenceCellExtensions)
-  Decidim::Conferences::ConferenceMCell.include(Decidim::ConferenceCellExtensions)
-  Decidim::Conferences::PhotoCell.prepend(Decidim::PhotoCellOverride)
+  #Decidim::CardMCell.prepend(Decidim::CardMCellOverride)
+  #Decidim::CardMCell.include(Decidim::ConferenceCellExtensions)
+  #Decidim::Conferences::ConferenceMCell.include(Decidim::ConferenceCellExtensions)
+  #Decidim::Conferences::PhotoCell.prepend(Decidim::PhotoCellOverride)
   Decidim::Conference.include(ConferenceOverride)
 end
 
