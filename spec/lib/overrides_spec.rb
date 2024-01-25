@@ -9,17 +9,15 @@ checksums = [
   {
     package: "decidim-conferences",
     files: {
-      "/app/controllers/decidim/conferences/conferences_controller.rb" => "d01431128e882ddfac419ae90a08969c",
-      "/app/models/decidim/conference.rb" => "8d7b097f3dc4d626b6972f380332b713",
-      "/app/cells/decidim/conferences/conference_m_cell.rb" => "d2b5f21f279c9464230244dea2287098",
-      "/app/cells/decidim/conferences/content_blocks/highlighted_conferences_cell.rb" => "9107d774637aca2a4acfbe2c47426484"
+      "/app/controllers/decidim/conferences/conferences_controller.rb" => "4e1bd7427cfd12c79391b451e07a2e2a",
+      "/app/models/decidim/conference.rb" => "095732cb2451adfb9db7a46078dc3a51",
+      "/app/cells/decidim/conferences/content_blocks/highlighted_conferences_cell.rb" => "7f24462f802a2c277697205511103d90"
     }
   },
   {
     package: "decidim-core",
     files: {
-      "/app/cells/decidim/statistic_cell.rb" => "b6f5eb0ab09653dc5633656b84fc2f7b",
-      "/app/cells/decidim/card_m_cell.rb" => "e86e59070ff3bd11f65208a2f32936f3"
+      "/app/cells/decidim/statistic_cell.rb" => "b6f5eb0ab09653dc5633656b84fc2f7b"
     }
   }
 ]
