@@ -5,7 +5,6 @@
     <%= render :image if has_image? %>
     <div class="card__content">
       <%= render :header if has_header? %>
-      <%= render :tags %>
 
       <div class="card__text">
         <div class="card__text--paragraph">
@@ -16,6 +15,7 @@
 
     </div>
 
+    <%= render :tags %>
     <%= render :data %>
     <%= render :footer %>
   </div>
