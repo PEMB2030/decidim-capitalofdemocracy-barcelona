@@ -4,3 +4,23 @@
 //
 //
 // By default this is empty.
+:root {
+    --primary-color: rgb(81, 79, 154);
+    --secondary-color: rgb(255, 255, 255);
+}
+
+
+a#hero-cta {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+a#hero-cta:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.main-footer,
+.mini-footer {
+  background-color: var(--primary-color) !important;
+}
