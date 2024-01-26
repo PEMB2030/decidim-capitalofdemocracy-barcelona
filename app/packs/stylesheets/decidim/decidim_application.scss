@@ -3,7 +3,8 @@
 // more priority
 //
 //
-// By default this is empty.
+// By default this is empty
+
 :root {
     --primary-color: rgb(81, 79, 154);
     --secondary-color: rgb(255, 255, 255);
@@ -18,6 +19,19 @@ a#hero-cta {
 a#hero-cta:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+#active-processes {
+    background-color: #f4f4f4;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .heading3 {
+        font-size: 1.75em;
+    }
 }
 
 .main-footer,
