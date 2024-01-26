@@ -1,4 +1,4 @@
-<section id="active-processes" class="extended home-section">
+<section id="active-processes" class="extended home-section bg-gray-6">
   <div class="wrapper-home py-16 px-4 md:px-6 lg:px-16">
     <div class="row column">
       <!-- <h3 class="section-heading"><%= t(".title") %></h3> -->
@@ -9,7 +9,7 @@
               <div class="card bg-transparent border-none">
                 <%= link_to item[:link_url] do %>
                   <%= image_tag item[:image_url] if item[:image_url] %>
-                  <h3 class="heading3 card-header mt-8 mb-8 text-left sm:ml-8 md:mt-4 md:mb-4 lg:mt-6 lg:mb-6 xl:mt-8 xl:mb-8" style="color: <%= item[:text_color] %>;"><%= item[:link_text] %></h3>
+                  <h3 class="heading3 card-header hover:underline mt-8 mb-8 text-left sm:ml-8 md:mt-4 md:mb-4 lg:mt-6 lg:mb-6 xl:mt-8 xl:mb-8" style="color: <%= item[:text_color] %>;"><%= item[:link_text] %></h3>
                 <% end %>
               </div>
             </div>

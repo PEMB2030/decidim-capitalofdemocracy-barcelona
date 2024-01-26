@@ -10,20 +10,21 @@
     --secondary-color: rgb(255, 255, 255);
 }
 
-
-a#hero-cta {
+a#hero-cta,
+section#highlighted_content_banner a.button {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
-a#hero-cta:hover {
+a#hero-cta:hover,
+section#highlighted_content_banner a.button:hover{
     background-color: var(--primary-color);
     color: var(--secondary-color);
+
 }
 
 #active-processes {
-    background-color: #f4f4f4;
-
     img {
         width: 100%;
         height: auto;
