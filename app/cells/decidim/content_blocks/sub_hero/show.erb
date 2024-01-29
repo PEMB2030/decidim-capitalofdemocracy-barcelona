@@ -5,9 +5,9 @@
     </h2>
     <% unless current_user %>
       <div>
-        <%= link_to decidim.new_user_registration_path, class: "button--sc subhero-cta link mt-8 no-underline text-primary flex justify-center items-center relative tracking-wide font-semibold uppercase hover:underline", title: t("decidim.pages.home.sub_hero.register_title") do %>
+        <%= link_to decidim.new_user_registration_path, class: "button--sc subhero-cta link mt-8 no-underline text-primary flex justify-center items-center relative tracking-wide font-semibold uppercase hover:underline group", title: t("decidim.pages.home.sub_hero.register_title") do %>
           <%= t("decidim.pages.home.sub_hero.register") %>
-          <%= icon "arrow-right-line", class: "fill-current icon" %>
+          <%= icon "arrow-right-line", class: "fill-current transition-transform transform group-hover:translate-x-1 group-hover:scale-110" %>
         <% end %>
       </div>
     <% end %>
