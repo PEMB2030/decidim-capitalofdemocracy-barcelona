@@ -1,0 +1,15 @@
+<section id="sub_hero" class="home__section">
+  <div class="editor-content text-center">
+    <h2 class="leading-tight text-lg md:text-2xl lg:text-3xl no-underline font-normal">
+        <%= organization_description %>
+    </h2>
+    <% unless current_user %>
+      <div>
+        <%= link_to decidim.new_user_registration_path, class: "button--sc subhero-cta link mt-8 no-underline text-primary flex justify-center items-center relative tracking-wide font-semibold uppercase hover:underline", title: t("decidim.pages.home.sub_hero.register_title") do %>
+          <%= t("decidim.pages.home.sub_hero.register") %>
+          <%= icon "arrow-right-line", class: "fill-current icon" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
