@@ -1,16 +1,16 @@
+.main-footer__badge {
+  display: block;
+  width: 140px;
+}
+
 @media print, screen and (min-width: 64em) {
   .main-footer {
     position: relative;
   }
   .main-footer__badge {
     position: absolute;
-    bottom: 7.5rem;
+    bottom: 6.5rem;
   }
-}
-
-.main-footer__badge {
-  display: block;
-  width: 140px;
 }
 
 .main-footer,
@@ -19,37 +19,19 @@ background-color: var(--primary-color) !important;
 color: var(--secondary-color) !important;
 }
 
-.footer__logo-title {
-  margin: 0;
-  width: 150px;
-  line-height: 1rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.02rem;
+.main-footer__down,
+.mini-footer {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
 
-.footer-social__icon .icon {
-  width: 26px;
-  height: 26px;
-}
-
-@media print, screen and (min-width: 40em) {
-  .logos img {
-    margin-right: 1rem;
-  }
-
-  .logos img:last-child {
-    margin-right: 0;
-  }
-
-  .footer-nav {
-    padding-top: 0;
-  }
+.main-footer__down {
+  border-top: none !important;
 }
 
 .footer-logo {
-  margin-right: 1rem;
   display: flex;
+  gap: 1rem;
   
   img {
     height: 50px;
@@ -60,48 +42,26 @@ color: var(--secondary-color) !important;
   }
 }
 
-@media print, screen and (max-width: 40em) {
-  .logos img,
-  .logos a {
-    margin-top: 2rem;
-    height: 40px;
-  }
-
-  .logos a img {
-    margin-top: 0;
-  }
-
-  .logos img:last-child {
-    margin-right: 0;
-  }
-
-  .logos {
-    flex-direction: column;
-  }
-
-  .main-footer__content {
-    flex-direction: column-reverse;
-  }
-}
-
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
-.grid-container {
+.grid-footer-container {
+  max-width: 1536px;;
+  margin: 0;
+  padding: 0 16px;
   display: grid;
   grid-template-columns: 1fr;
   align-content: center;
   justify-items: center;
-  gap: 1rem;
-  margin: 0 auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  grid-gap: 1rem;
 
-  
-  @media (min-width: 40em) {
+  @media (min-width: 576px) {
+    margin: 0 24px;
+    padding: 0 64px;
     grid-template-columns: repeat(12, 1fr);
 
     .column, .first-column {
@@ -127,8 +87,16 @@ color: var(--secondary-color) !important;
 
 .first-column {
   display: flex;
-  
+  flex-wrap: wrap;
+  align-items: center;
+
   .cc-badge {
     margin-right: 0.5rem;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

@@ -2,8 +2,8 @@
   <div class="wrapper-home py-16 px-4 md:px-6 lg:px-16">
     <div class="row column">
       <!-- <h3 class="section-heading"><%= t(".title") %></h3> -->
-      <div class="flex items-center justify-center">
-        <div class="row small-up-1 medium-up-<%= items.size %>">
+      <div class="flex flex-row items-center justify-center">
+        <div class="flex md:flex-row gap-4 small-up-1 medium-up-<%= items.size %> flex-col">
           <% items.each do |item| %>
             <div class="column">
               <div class="card bg-transparent border-none">
