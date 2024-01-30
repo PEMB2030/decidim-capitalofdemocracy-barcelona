@@ -1,8 +1,16 @@
 @media print, screen and (min-width: 64em) {
+  .main-footer {
+    position: relative;
+  }
   .main-footer__badge {
     position: absolute;
-    top: -3rem;
+    bottom: 7.5rem;
   }
+}
+
+.main-footer__badge {
+  display: block;
+  width: 140px;
 }
 
 .main-footer,
@@ -37,13 +45,18 @@ color: var(--secondary-color) !important;
   .footer-nav {
     padding-top: 0;
   }
+}
 
-  .footer-logo {
-    margin-right: 1rem;
-    display: block;
-    img {
-      height: 50px;
-    }
+.footer-logo {
+  margin-right: 1rem;
+  display: flex;
+  
+  img {
+    height: 50px;
+  }
+
+  svg.fill-current {
+    display: none;
   }
 }
 
@@ -99,7 +112,7 @@ color: var(--secondary-color) !important;
       grid-column: span 6;
     }
   }
-
+  
   svg.fill-current {
     display: none;
   }
@@ -114,7 +127,7 @@ color: var(--secondary-color) !important;
 
 .first-column {
   display: flex;
-
+  
   .cc-badge {
     margin-right: 0.5rem;
   }
