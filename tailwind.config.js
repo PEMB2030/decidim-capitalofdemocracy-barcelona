@@ -45,8 +45,7 @@ module.exports = {
         2: "#3E4C5C",
         3: "#E1E5EF",
         4: "#242424",
-        5: "#F6F8FA",
-        6: "#F4F4F4"
+        5: "#F6F8FA"
       },
       background: {
         DEFAULT: "#F3F4F7",
