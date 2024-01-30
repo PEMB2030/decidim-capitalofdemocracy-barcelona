@@ -14,10 +14,16 @@
     height: auto;
   }
 
+  .heading3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+  }
+
+
   .section-heading {
     position: relative;
     margin-left: 1.5rem;
-    color: $capitalitat-violet;
+    color: var(--primary-color);
   }
 
   .section-heading::after {
@@ -27,7 +33,7 @@
     top: 6px;
     width: 10px;
     height: 10px;
-    border: solid $capitalitat-violet;
+    border: solid var(--primary-color);
     border-width: 0 2px 2px 0;
     transform: rotate(-45deg);
   }

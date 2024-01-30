@@ -2,8 +2,8 @@
 <!-- replace ".mini-footer" -->
 
 <div class="mini-footer">
-    <div class="flex row-footer sm:flex-col">
-      <div class="flex-auto  footer-column-1">
+    <div class="grid-container">
+      <div class="first-column">
         <a rel="license noopener" class="cc-badge"
           href="http://creativecommons.org/licenses/by-sa/4.0/"
           target="_blank">
@@ -11,9 +11,9 @@
         </a>
         <%= t("layouts.decidim.footer.made_with_open_source").html_safe %>
       </div>
-      <div class="flex-auto footer-column-2">
+      <div class="middle-column">
           <nav class="main__footer__nav">
-            <ul class="">
+            <ul class="footer-nav ">
               <% organization_pages = current_organization.static_pages_accessible_for(current_user) %>
               <% if organization_pages.any? %>
                 <li><%= link_to t("decidim.pages.index.title"), decidim.pages_path %></li>
@@ -34,7 +34,7 @@
             </ul>
           </nav>
       </div>
-      <div class="flex-auto footer-column-3">
+      <div class="column">
         <div class="decidim-logo">
           <a rel="decidim noopener"
             href="https://decidim.org/"
@@ -44,4 +44,4 @@
         </div>
       </div>
     </div>
-</div>
+</div
