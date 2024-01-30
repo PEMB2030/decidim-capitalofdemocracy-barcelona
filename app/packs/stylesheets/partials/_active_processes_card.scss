@@ -1,13 +1,5 @@
 #active-processes {
-  .card {
-    background-color: transparent;
-    border: none;
-  }
-
-  .card-header {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+  background-color: #f4f4f4;
 
   img {
     width: 100%;
@@ -17,35 +9,5 @@
   .heading3 {
     font-size: 1.5em;
     line-height: 1.2;
-  }
-
-
-  .section-heading {
-    position: relative;
-    margin-left: 1.5rem;
-    color: var(--primary-color);
-  }
-
-  .section-heading::after {
-    content: "";
-    position: absolute;
-    left: -1.5em;
-    top: 6px;
-    width: 10px;
-    height: 10px;
-    border: solid var(--primary-color);
-    border-width: 0 2px 2px 0;
-    transform: rotate(-45deg);
-  }
-
-  .section-heading::before {
-    content: none;
-  }
-}
-
-@media print, screen and (max-width: 40em) {
-  #active-processes .card-header {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
 }
