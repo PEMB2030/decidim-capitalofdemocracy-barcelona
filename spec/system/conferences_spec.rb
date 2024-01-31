@@ -24,8 +24,7 @@ describe "Visit conferences" do
 
   before do
     switch_to_host(organization.host)
-    visit decidim.root_path
-    click_link_or_button "Conferences"
+    visit decidim_conferences.conferences_path
   end
 
   shared_examples "checks the conference link" do |type|

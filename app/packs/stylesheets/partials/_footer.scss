@@ -50,18 +50,13 @@ color: var(--secondary-color) !important;
 }
 
 .grid-footer-container {
-  max-width: 1536px;;
-  margin: 0;
-  padding: 0 16px;
   display: grid;
   grid-template-columns: 1fr;
   align-content: center;
   justify-items: center;
   grid-gap: 1rem;
 
-  @media (min-width: 576px) {
-    margin: 0 24px;
-    padding: 0 64px;
+  @media (min-width: 40em) {
     grid-template-columns: repeat(12, 1fr);
 
     .column, .first-column {
