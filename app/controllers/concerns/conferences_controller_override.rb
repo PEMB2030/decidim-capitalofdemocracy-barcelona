@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 module ConferencesControllerOverride
-  module Paginable
-    extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
 
     included do
       private
@@ -45,6 +44,5 @@ module ConferencesControllerOverride
           query.merge!(Decidim::Conference.filtered_by_hashtag(hashtag_for_current_type)) if hashtag_for_current_type
         end
       end
-    end
   end
 end
