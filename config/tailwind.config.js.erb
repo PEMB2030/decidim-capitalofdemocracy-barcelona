@@ -39,13 +39,16 @@ module.exports = {
       success: withOpacity("--success-rgb"),
       alert: withOpacity("--alert-rgb"),
       warning: withOpacity("--warning-rgb"),
+      capitalrose: "#E670A6",
+      capitalblue: "#3397D9",
       black: "#020203",
       gray: {
         DEFAULT: "#6B7280CC", // 80% opacity
         2: "#3E4C5C",
         3: "#E1E5EF",
         4: "#242424",
-        5: "#F6F8FA"
+        5: "#F6F8FA",
+        6: "#F4F4F4"
       },
       background: {
         DEFAULT: "#F3F4F7",

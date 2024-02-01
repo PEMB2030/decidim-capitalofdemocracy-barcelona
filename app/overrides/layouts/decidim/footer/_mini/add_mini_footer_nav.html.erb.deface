@@ -2,7 +2,7 @@
 <!-- replace ".mini-footer" -->
 
 <div class="mini-footer">
-    <div class="grid-footer-container mini-footer__content">
+    <div class="grid-footer-container mini-footer__content bg-primary">
       <div class="first-column">
         <a rel="license noopener" class="cc-badge"
           href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -44,4 +44,4 @@
         </div>
       </div>
     </div>
-</div
+</div>

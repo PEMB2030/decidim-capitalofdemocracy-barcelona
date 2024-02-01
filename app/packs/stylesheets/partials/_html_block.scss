@@ -1,5 +1,4 @@
 .promo-video {
-  // background-color: $capitalitat-violet !important;
   padding: 4rem 0;
   @media print, screen and (max-width: 40em) {
     padding: 0;
@@ -39,21 +38,4 @@
       height: 50px;
     }
   }
-  // .column {
-  //   @media print, screen and (max-width: 40em) {
-  //     margin-top: 2rem;
-  //     img {
-  //       height: 50px;
-  //     }
-  //   }
-  // }
-  // .full-height {
-  //   .column {
-  //     padding-right: 2rem;
-  //     padding-left: 2rem;
-  //     img {
-  //       height: auto;
-  //     }
-  //   }
-  // }
 }
