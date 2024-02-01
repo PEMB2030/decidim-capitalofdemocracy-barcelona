@@ -6,7 +6,7 @@
 }
 
 .democracy-innovation {
-  background-color: $capitalitat-violet !important;
+  background-color: var(--primary-color) !important;
   padding: 4rem 0;
   color: #ffffff;
 
@@ -29,7 +29,7 @@
       margin: 0 0 2rem 0;
     }
   }
-  background-color: $capitalitat-violet !important;
+  background-color: var(--primary-color)!important;
   .column img {
     height: 30px;
   }
