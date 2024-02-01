@@ -9,3 +9,14 @@
 :root {
     --primary-color: rgb(81, 79, 154);
 }
+
+section#highlighted_content_banner a.button {
+    background-color: white;
+    color: var(--primary-color);
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+
+section#highlighted_content_banner a.button:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
