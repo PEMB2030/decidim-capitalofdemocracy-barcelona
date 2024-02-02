@@ -41,6 +41,10 @@ module.exports = {
       warning: withOpacity("--warning-rgb"),
       capitalrose: "#E670A6",
       capitalblue: "#3397D9",
+      capitalorange: "#EB7329",
+      city: "#E670A6",
+      international: "#3397D9", 
+      activity: "#EB7329",
       black: "#020203",
       gray: {
         DEFAULT: "#6B7280CC", // 80% opacity
