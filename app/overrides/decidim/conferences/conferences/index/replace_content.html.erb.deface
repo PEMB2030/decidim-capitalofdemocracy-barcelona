@@ -1,5 +1,5 @@
 <!-- replace "h1" -->
 
-<section id="conferences-filter" class="flex flex-col">
+<section id="conferences-filter">
 	<%= render partial: "capitalitat/conferences_buttons" %>
 </section>
