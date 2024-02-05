@@ -10,7 +10,8 @@
 
       <%= link_to I18n.t(item[:key], scope: "decidim.conferences.custom_conference_types"),
                   conferences_path(type: item[:key]),
-                  class: "button button__xs md:button__lg uppercase flex #{item[:key]} bg-#{item[:key]} text-white #{is_active ? 'opacity-100' : 'opacity-50'} hover:bg-white" %>
+                  # class: "bg-city bg-international bg-activity",  keep it for tailwind preprocessor
+                  class: "button button__xs md:button__lg uppercase flex #{item[:key]} bg-#{item[:key]} text-white #{is_active ? 'opacity-100' : 'opacity-50'}" %>
     <% end %>
   <% end %>
 </div>

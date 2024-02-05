@@ -29,6 +29,7 @@
 /public/assets
 .byebug_history
 
+.rubocop-*
 tailwind.config.js
 
 # Ignore master key for decrypting credentials and more.
