@@ -5,20 +5,6 @@ module Decidim
   # so other cells only have to customize a few methods or overwrite views.
   class CardGCell < Decidim::ViewModel
     # avoid metaprogramming in CSS classes due to Tailwind purge
-    hashtag = :hashtag
-    DEFAULT_CSS = {
-      default: "card__grid",
-      img: "card__grid-img",
-      text: "card__grid-text",
-      metadata: "card__grid-metadata"
-    }.freeze
-
-    HIGHLIGHT_CSS = {
-      default: Decidim::Conference.filtered_by_hashtag(hashtag) ? "card__highlight border-2 border-#{hashtag}" : "card__highlight",
-      img: "card__highlight-img",
-      text: "card__highlight-text",
-      metadata: "card__highlight-metadata"
-    }.freeze
 
     include Decidim::ApplicationHelper
     include Decidim::SanitizeHelper
@@ -29,6 +15,31 @@ module Decidim
       render
     end
 
+    # default: "border-city border-international border-activity",  #keep it for tailwind preprocessor
+    def highlight_css
+      @highlight_css ||= { default: "card__highlight border border-#{conference_class}",
+                           img: "card__highlight-img",
+                           text: "card__highlight-text",
+                           metadata: "card__highlight-metadata" }
+    end
+
+    def default_css
+      @default_css ||= { default: "card__grid border border-#{conference_class}",
+                         img: "card__grid-img",
+                         text: "card__grid-text",
+                         metadata: "card__grid-metadata" }
+    end
+
+    def conference_class
+      return "" unless model.is_a?(Decidim::Conference)
+
+      custom_conference_types = Rails.application.secrets.custom_conference_types || []
+      custom_conference_types.each do |item|
+        return item[:key] if model.hashtag.include?(item[:hashtag])
+      end
+      ""
+    end
+
     private
 
     def highlight?
@@ -36,7 +47,7 @@ module Decidim
     end
 
     def classes
-      @classes ||= highlight? ? HIGHLIGHT_CSS : DEFAULT_CSS
+      @classes ||= highlight? ? highlight_css : default_css
     end
 
     def resource_id
