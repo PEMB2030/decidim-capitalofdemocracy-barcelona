@@ -28,12 +28,9 @@ background-color: var(--primary-color) !important;
   border-top: none !important;
 }
 
-.footer-logo {
-  display: flex;
-  gap: 1rem;
-  
+.footer-logo {  
   img {
-    height: 50px;
+    height: 40px;
   }
 
   svg.fill-current {
@@ -41,51 +38,30 @@ background-color: var(--primary-color) !important;
   }
 }
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.grid-footer-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
-  justify-items: center;
-  grid-gap: 1rem;
-
-  @media (min-width: 40em) {
-    grid-template-columns: repeat(12, 1fr);
-
-    .column, .first-column {
-      grid-column: span 3;
-    }
-    
-    .middle-column {
-      grid-column: span 6;
+@media print, screen and (min-width: 577px) {
+  .footer-logo {  
+    img {
+      height: 50px;
     }
   }
-  
+}
+
+.mini-footer__content {
   svg.fill-current {
     display: none;
   }
 }
 
 .decidim-logo {
-  display: block;
   width: 140px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .first-column {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
+  
   .cc-badge {
-    margin-right: 0.5rem;
     img {
       display: inline-block;
       vertical-align: middle;

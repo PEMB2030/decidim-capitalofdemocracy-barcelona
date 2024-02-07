@@ -9,7 +9,7 @@
   <div class="main-footer__down bg-primary">
     
     <nav class="md:w-1/2 lg:w-auto" role="navigation" aria-label="Logos">
-      <div class="logos footer-logo">
+      <div class="logos footer-logo flex flex-row gap-2">
         <div>
           <%= link_to "https://capitalofdemocracy.eu/", target: "_blank" do %>
             <%= image_pack_tag("media/images/logo_capitalitat_white.png") %>
