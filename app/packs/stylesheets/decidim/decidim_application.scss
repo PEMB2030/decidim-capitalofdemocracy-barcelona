@@ -9,3 +9,25 @@
 :root {
     --primary-color: rgb(81, 79, 154);
 }
+
+@media (min-width: 768px){
+    [data-target*=dropdown] {
+        display: flex !important;
+    }
+}
+.main-footer__language {
+    z-index: 20;
+    background-color: white;
+    outline: none !important;
+    width: 10rem;
+   
+    border-color: #E1E5EF;
+}
+@media (max-width: 1010px){
+   
+}
+
+.mobile_menu__language-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
