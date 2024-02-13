@@ -1,11 +1,11 @@
 <!-- insert_before ".menu-bar__main-dropdown__top" -->
 
 <% if %w(en ca es).length > 1 %>
-  <div class="mobile_menu__language-container flex gap-8 justify-center">
+  <ul class="mobile_menu__language-container flex gap-8 justify-center">
         <% %w(en ca es).each do |locale| %>
-          <span lang="<%= locale %>" class="text-secondary font-bold text-center text-base">
+          <li lang="<%= locale %>" class="text-secondary font-bold text-center text-base">
             <%= link_to I18n.t("locale_name.#{locale}", scope: "locale").upcase, decidim.locale_path(locale: locale), method: :post, role: "menuitem", lang: locale %>
           </span>
         <% end %>
-  </div>
+  </ul>
 <% end %>

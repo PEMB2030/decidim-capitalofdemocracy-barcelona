@@ -1,27 +1,27 @@
 <section id="partner-logos" class="extended home-section partner-logos bg-capitalrose text-white">
   <div class="wrapper-home bg-capitalrose">
-    <div class="flex flex-col text-center justify-center py-8">
-      <h2 class="mb-8 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-4 justify-items-center mb-8">
+    <div class="flex flex-col text-center justify-center pt-8">
+      <h2 class="md:self-start md:ml-2 mb-2 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 justify-items-center md:place-items-center md:justify-items-start gap-4 mb-8 md:mx-2">
         <% first_row.each do |image_path| %>
-          <div class="col-span-1 md:col-span-2 lg:col-span-2">
-            <%= image_tag image_path, class: "h-14" %>
+          <div class="col-span-1 md:col-span-1 lg:col-span-2">
+            <%= image_tag image_path, class: "w-40 lg:w-44 md:h-fit" %>
           </div>
         <% end %>
       </div>
-      <h2 class="mb-8 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title2") %></h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-4 justify-items-center mb-8">
+      <h2 class="md:self-start md:ml-2 mb-2 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title2") %></h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 justify-items-center md:justify-items-start gap-2 mb-8 md:mx-2">
         <% second_row.each do |image_path| %>
-          <div class="col-span-1 md:col-span-2 lg:col-span-2">
-            <%= image_tag image_path, class: "h-14" %>
+          <div class="col-span-1 md:col-span-1 lg:col-span-2">
+            <%= image_tag image_path, class: "h-10 md:h-12" %>
           </div>
         <% end %>
       </div>
-      <h2 class="mb-8 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title3") %></h2>
-      <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-10 gap-4 justify-items-center">
+      <h2 class="md:self-start md:ml-2 mb-2 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title3") %></h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 justify-items-center place-items-center md:justify-items-start gap-4 mb-8 md:mx-2">
         <% third_row.each do |image_path| %>
           <div class="col-span-1 md:col-span-1 lg:col-span-2">
-            <%= image_tag image_path, class: "h-8 w-full" %>
+            <%= image_tag image_path, class: "w-28 h-fit md:h-2/5" %>
           </div>
         <% end %>
       </div>
