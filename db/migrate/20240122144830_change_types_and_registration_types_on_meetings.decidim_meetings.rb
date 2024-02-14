@@ -12,7 +12,7 @@ class ChangeTypesAndRegistrationTypesOnMeetings < ActiveRecord::Migration[6.1]
   def up
     rename_column :decidim_meetings_meetings, :type_of_meeting, :old_type_of_meeting
     rename_column :decidim_meetings_meetings, :registration_type, :old_registration_type
-    change_table :decidim_meetings_meetings, bulk: true
+    add_column :decidim_meetings_meetings, :type_of_meeting, :integer, default: 0, null: false
     add_column :decidim_meetings_meetings, :registration_type, :integer, default: 0, null: false
 
     Meeting.reset_column_information
@@ -24,7 +24,7 @@ class ChangeTypesAndRegistrationTypesOnMeetings < ActiveRecord::Migration[6.1]
       Meeting.where(old_registration_type: status).update_all(registration_type: index) # rubocop:disable Rails/SkipsModelValidations
     end
 
-    change_table :decidim_meetings_meetings, bulk: true
+    remove_column :decidim_meetings_meetings, :old_type_of_meeting
     remove_column :decidim_meetings_meetings, :old_registration_type
   end
 
@@ -32,7 +32,7 @@ class ChangeTypesAndRegistrationTypesOnMeetings < ActiveRecord::Migration[6.1]
     rename_column :decidim_meetings_meetings, :type_of_meeting, :old_type_of_meeting
     rename_column :decidim_meetings_meetings, :registration_type, :old_registration_type
 
-    change_table :decidim_meetings_meetings, bulk: true
+    add_column :decidim_meetings_meetings, :type_of_meeting, :string, default: null
     add_column :decidim_meetings_meetings, :registration_type, :string, default: null
 
     Meeting.reset_column_information
@@ -44,7 +44,7 @@ class ChangeTypesAndRegistrationTypesOnMeetings < ActiveRecord::Migration[6.1]
       Meeting.where(old_registration_type: index).update_all(registration_type: status) # rubocop:disable Rails/SkipsModelValidations
     end
 
-    change_table :decidim_meetings_meetings, bulk: true
+    remove_column :decidim_meetings_meetings, :old_type_of_meeting
     remove_column :decidim_meetings_meetings, :old_registration_type
   end
 end
