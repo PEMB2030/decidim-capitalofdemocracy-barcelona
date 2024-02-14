@@ -8,6 +8,7 @@
 
 :root {
     --primary-color: rgb(81, 79, 154);
+    --capital-blue: #3399DB;
 }
 
 @media (min-width: 768px){
@@ -34,4 +35,13 @@
 
 .partner-logo3 {
     height: 300px;
+}
+
+div#breadcrumb-main-dropdown-mobile {
+    background-color: var(--capital-blue);
+}
+
+div#breadcrumb-main-dropdown-mobile,
+.menu-bar__main-dropdown__menu li a{
+    color: #ffffff;
 }

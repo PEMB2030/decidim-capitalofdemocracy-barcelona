@@ -7,7 +7,7 @@ class AddFieldValuesAndTargetToDecidimTemplates < ActiveRecord::Migration[6.0]
   end
 
   def change
-    add_column :decidim_templates_templates, :field_values, :json, default: {}
+    change_table :decidim_templates_templates, bulk: true
     add_column :decidim_templates_templates, :target, :string
 
     reversible do |direction|
