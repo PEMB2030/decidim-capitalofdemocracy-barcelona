@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
+  revision: 036eb6b91f438ced4c6d7e1e44d3ff9d98ceeced
+  branch: constrain-fixes
+  specs:
+    decidim-decidim_awesome (0.11.0)
+      decidim-admin (>= 0.28.0, < 0.29)
+      decidim-core (>= 0.28.0, < 0.29)
+      deface (>= 1.5)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer.git
   revision: 03e6c98e85a00fe47f8db2726f1a1a98e808efda
   branch: master
@@ -730,6 +741,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.17.0)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
@@ -838,6 +851,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim (= 0.28.0)
   decidim-conferences (= 0.28.0)
+  decidim-decidim_awesome!
   decidim-dev (= 0.28.0)
   decidim-newsletter_agenda!
   decidim-templates (= 0.28.0)
