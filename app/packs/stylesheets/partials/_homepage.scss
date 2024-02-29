@@ -1,0 +1,36 @@
+/* Remove gradient from hero image */
+.hero__container {
+  background-image: var(--hero-image);
+}
+/* Remove gradient from newsletter call to action */
+.home__section-image {
+  background-image: var(--hero-image);
+}
+/* increase margins for newsletter call to action */
+@media (min-width: 768px) {
+  .home__section, .home .content-block {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+/* Log size */
+@media (min-width: 1280px) {
+  header .main-bar__logo {
+    grid-column: span 3 / span 3;
+  }
+}
+/* custom logos block */
+#partner-logos {
+  .wrapper-home {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+/* custom logos bcn */
+#bcn-logo {
+  position: absolute;
+  right: 0;
+  img {
+    height: 46px !important;
+  }
+}

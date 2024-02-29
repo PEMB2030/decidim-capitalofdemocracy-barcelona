@@ -4,7 +4,7 @@ module Decidim
   module Conferences
     module ContentBlocks
       module HighlightedConferencesCellOverride
-        def highlighted_conferences
+        def highlighted_spaces
           Decidim::Conference.where(organization: current_organization, promoted: true).order(start_date: :asc)
         end
       end

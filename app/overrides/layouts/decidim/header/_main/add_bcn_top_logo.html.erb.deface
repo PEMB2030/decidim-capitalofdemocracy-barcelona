@@ -1,0 +1,3 @@
+<!-- insert_after ".main-bar__links-desktop" -->
+
+<div id="bcn-logo"><%= image_pack_tag("media/images/logo_bcn.png", alt: "Barcelona") %></div>

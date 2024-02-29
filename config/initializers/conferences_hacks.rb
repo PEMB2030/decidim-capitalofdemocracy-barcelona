@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.config.to_prepare do
+  Decidim::Conferences::ContentBlocks::HighlightedConferencesCell.prepend(Decidim::Conferences::ContentBlocks::HighlightedConferencesCellOverride)
   Decidim::Conference.include(ConferenceOverride)
 end
 
