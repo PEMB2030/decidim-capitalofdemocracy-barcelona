@@ -1,7 +1,29 @@
 /* Remove gradient from hero image */
-.hero__container {
-  background-image: var(--hero-image);
+.extended-hero {
+  &.hero__container {
+    // background-size: cover;
+    background-image: var(--hero-image);
+  }
+  .hero {
+    padding: 8rem 0 !important;
+    gap: normal !important;
+    height: auto !important;
+  }
 }
+.hero__title {
+  font-weight: 400 !important;
+  letter-spacing: 0.1;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+.hero__subtitle {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
 /* Remove gradient from newsletter call to action */
 .home__section-image {
   background-image: var(--hero-image);
