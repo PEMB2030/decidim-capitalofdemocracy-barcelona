@@ -48,3 +48,8 @@
     margin: 0 auto;
   }
 }
+
+//  Decidim fix for https://github.com/decidim/decidim/pull/12559
+[data-dialog] > * {
+  --tw-translate-x: -50%;
+}
