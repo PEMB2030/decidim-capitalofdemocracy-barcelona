@@ -1,29 +1,65 @@
 <section id="partner-logos" class="extended home-section partner-logos bg-capitalrose text-white">
   <div class="wrapper-home bg-capitalrose">
     <div class="flex flex-col text-center justify-center pt-8">
-      <h2 class="md:self-start md:ml-2 mb-2 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 justify-items-center md:place-items-center md:justify-items-start gap-4 mb-8 md:mx-2">
-        <% first_row.each do |image_path| %>
-          <div class="col-span-1 md:col-span-1 lg:col-span-2">
-            <%= image_tag image_path, class: "w-40 lg:w-44 md:h-fit" %>
-          </div>
-        <% end %>
+      <h2 class="md:self-start md:ml-2 mb-4 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title1") %></h2>
+      <div class="grid grid-cols-12 mb-10 justify-items-center md:place-items-center md:justify-items-start gap-4">
+        <div class="col-span-4">
+          <%= image_tag first_row[0], class: "h-14 w-auto" %>
+        </div>
+        <div class="col-span-3">
+          <%= image_tag first_row[1], class: "h-14 w-auto" %>
+        </div>
+        <div class="col-span-3">
+          <%= image_tag first_row[2], class: "h-14 w-auto" %>
+        </div>
       </div>
-      <h2 class="md:self-start md:ml-2 mb-2 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title2") %></h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 justify-items-center md:justify-items-start gap-2 mb-8 md:mx-2">
-        <% second_row.each do |image_path| %>
-          <div class="col-span-1 md:col-span-1 lg:col-span-2">
-            <%= image_tag image_path, class: "h-10 md:h-12" %>
-          </div>
-        <% end %>
+      <h2 class="md:self-start md:ml-2 mb-4 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title2") %></h2>
+      <div class="grid grid-cols-12 justify-items-center md:justify-items-start gap-4 mb-8">
+        <div class="col-span-4">
+          <%= image_tag second_row[0], class: "h-16 w-auto" %>
+        </div>
+        <div class="col-span-3">
+          <%= image_tag second_row[1], class: "h-16 w-auto" %>
+        </div>
       </div>
-      <h2 class="md:self-start md:ml-2 mb-2 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title3") %></h2>
-      <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 justify-items-center place-items-center md:justify-items-start gap-4 mb-8 md:mx-2">
-        <% third_row.each do |image_path| %>
-          <div class="col-span-1 md:col-span-1 lg:col-span-2">
-            <%= image_tag image_path, class: "w-28 h-fit md:h-2/5" %>
-          </div>
-        <% end %>
+      <h2 class="md:self-start md:ml-2 mb-4 text-xl md:text-2xl"><%= I18n.t(".decidim.content_blocks.partner_logos.title3") %></h2>
+      <div class="grid grid-cols-10 justify-items-center place-items-center md:justify-items-start gap-8 mb-8">
+        <div class="col-span-2">
+          <%= image_tag third_row[0], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[1], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[2], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[3], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[4], class: "h-10 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[5], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[6], class: "h-10 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[7], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[8], class: "h-10 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[9], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[10], class: "h-8 w-auto" %>
+        </div>
+        <div class="col-span-2">
+          <%= image_tag third_row[11], class: "h-10 w-auto" %>
+        </div>
       </div>
     </div>
   </div>

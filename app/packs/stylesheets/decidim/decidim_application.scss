@@ -9,43 +9,62 @@
 @import "../partials/footer";
 
 :root {
-    --primary-color: rgb(81, 79, 154);
-    --capital-blue: #3399DB;
+  --primary-color: rgb(81, 79, 154);
+  --capital-blue: #3399DB;
 }
 
 @media (min-width: 768px){
-    [data-target*=dropdown] {
-        display: flex !important;
-    }
+  [data-target*=dropdown] {
+    display: flex !important;
+  }
 }
-.main-footer__language {
-    z-index: 20;
-    background-color: white;
-    outline: none !important;
-    width: 10rem;
-   
-    border-color: #E1E5EF;
+
+/* custom logos bcn */
+#bcn-logo {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  img {
+    height: 46px !important;
+  }
 }
 
 .mobile_menu__language-container {
-    padding-top: 12px;
-    padding-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .partner-logo3 {
-    height: 300px;
+  height: 300px;
 }
 
 div#breadcrumb-main-dropdown-mobile {
-    background-color: var(--capital-blue);
+  background-color: var(--capital-blue);
 }
 
 #home__menu {
-    margin-bottom: 1px;
+  margin-bottom: 1px;
+}
+
+@media (max-width: 900px){
+  .main-bar {
+    .lg\:hidden {
+        margin-right: 4em;
+    }
+  }
+}
+@media (min-width: 900px) and (max-width: 1240px){
+  header .main-bar__container {
+    padding-right: 4em;
+  }
 }
 
 @media (max-width: 768px){
-    .menu-bar__main-dropdown__menu li a{
-        color: #ffff;
-    }
+  .main-bar__logo img {
+    margin: 0 2rem 0 0;
+  }
+
+  .menu-bar__main-dropdown__menu li a{
+    color: #ffff;
+  }
 }
