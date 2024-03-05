@@ -49,3 +49,4 @@ yarn-debug.log*
 public/decidim-packs
 public/sw.js*
 coverage/*
+*.sql
