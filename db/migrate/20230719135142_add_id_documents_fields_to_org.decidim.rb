@@ -3,7 +3,7 @@
 
 class AddIdDocumentsFieldsToOrg < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_organizations, :id_documents_methods, :string, array: true, default: ["online"]
+    change_table :decidim_organizations, bulk: true
     add_column :decidim_organizations, :id_documents_explanation_text, :jsonb, default: {}
 
     # rubocop:disable Rails/SkipsModelValidations

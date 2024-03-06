@@ -11,7 +11,7 @@ class MigrateProposalReportsDataToReports < ActiveRecord::Migration[5.0]
     Decidim::Proposals::ProposalReport.find_each do |proposal_report|
       moderation = Decidim::Moderation.find_or_create_by!(reportable: proposal_report.proposal,
                                                           participatory_process: proposal_report.proposal.feature.participatory_space)
-      Decidim::Report.create!(moderation: moderation,
+      Decidim::Report.create!(moderation:,
                               user: proposal_report.user,
                               reason: proposal_report.reason,
                               details: proposal_report.details)
@@ -19,7 +19,7 @@ class MigrateProposalReportsDataToReports < ActiveRecord::Migration[5.0]
     end
 
     drop_table :decidim_proposals_proposal_reports
-    remove_column :decidim_proposals_proposals, :report_count
+    change_table :decidim_proposals_proposals, bulk: true
     remove_column :decidim_proposals_proposals, :hidden_at
   end
 end

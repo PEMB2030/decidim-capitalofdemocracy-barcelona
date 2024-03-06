@@ -1,5 +1,5 @@
-<!-- insert_after "erb[loud]:contains('participatory_space_wrapper do')" -->
+<!-- replace "h1" -->
 
-<section id="conferences-filter" class="row collapse">
+<section id="conferences-filter">
 	<%= render partial: "capitalitat/conferences_buttons" %>
 </section>

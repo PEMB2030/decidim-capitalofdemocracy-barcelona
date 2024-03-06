@@ -3,8 +3,7 @@
 
 class AddCommentsAvailabilityColumnsToMeetingsTable < ActiveRecord::Migration[6.0]
   def change
-    add_column :decidim_meetings_meetings, :comments_enabled, :boolean, default: true
-    add_column :decidim_meetings_meetings, :comments_start_time, :datetime
+    change_table :decidim_meetings_meetings, bulk: true
     add_column :decidim_meetings_meetings, :comments_end_time, :datetime
     reversible do |dir|
       dir.up do

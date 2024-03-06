@@ -21,7 +21,7 @@ class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
     # retrieve current data
     current_data = Scope.select(:id, :name, :decidim_organization_id).as_json
 
-    change_table :decidim_scopes do |t|
+    change_table :decidim_scopes, bulk: true do |t|
       t.remove_index :name
       t.remove :name
       t.jsonb :name
@@ -50,7 +50,7 @@ class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
 
   def self.down
     # schema migration
-    change_table :decidim_scopes do |t|
+    change_table :decidim_scopes, bulk: true do |t|
       t.remove_index [:decidim_organization_id, :code]
       t.change :name, :string, null: false, index: :uniqueness
       t.remove :scope_type_id, :parent_id, :code, :part_of

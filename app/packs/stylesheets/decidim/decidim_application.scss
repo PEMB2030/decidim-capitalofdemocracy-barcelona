@@ -2,6 +2,81 @@
 // Notice that this file is included at the very end of the stylesheets packs to have
 // more priority
 //
-// To override CSS variables or Foundation settings use _decidim-settings.scss
 //
-// By default this is empty.
+// By default this is empty
+@import "../partials/fonts";
+@import "../partials/homepage";
+@import "../partials/footer";
+
+:root {
+  --primary-color: rgb(81, 79, 154);
+  --capital-blue: #3399DB;
+}
+
+@media (min-width: 768px){
+  [data-target*=dropdown] {
+    display: flex !important;
+  }
+}
+
+.mobile_menu__language-container {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.partner-logo3 {
+  height: 300px;
+}
+
+div#breadcrumb-main-dropdown-mobile {
+  background-color: var(--capital-blue);
+}
+
+#home__menu {
+  margin-bottom: 1px;
+}
+
+@media (max-width: 768px){
+  .main-bar__logo img {
+    margin: 0 2rem 0 0;
+  }
+
+  .menu-bar__main-dropdown__menu li a{
+    color: #ffff;
+  }
+}
+
+// Errors introduced by https://github.com/decidim/decidim/pull/12390
+//  Decidim fix for https://github.com/decidim/decidim/pull/12559
+[data-dialog] > * {
+  --tw-translate-x: -50%;
+}
+// fix for password, comes from this change 
+.input-group__password {
+  @apply w-full relative;
+
+  input {
+    @apply w-full;
+  }
+
+  button {
+    @apply absolute right-2 top-8;
+  }
+}
+header {
+  .menu-bar {
+    &__dropdown-content {
+      @apply absolute z-20 top-full left-8 cursor-auto
+    }
+    &-secondary {
+      @apply absolute z-20 top-[calc(100%+12px)] left-0;
+    }
+  }
+}
+.home {
+  &__section-header {
+    .button {
+      @apply md:ml-auto;
+    }
+  }
+}

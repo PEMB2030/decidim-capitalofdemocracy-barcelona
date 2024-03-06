@@ -3,8 +3,7 @@
 
 class AddGeolocalizationFieldsToProposals < ActiveRecord::Migration[5.0]
   def change
-    add_column :decidim_proposals_proposals, :address, :text
-    add_column :decidim_proposals_proposals, :latitude, :float
+    change_table :decidim_proposals_proposals, bulk: true
     add_column :decidim_proposals_proposals, :longitude, :float
   end
 end
