@@ -6,6 +6,7 @@ class AddForceUsersToAuthenticateBeforeAccessOrganization < ActiveRecord::Migrat
     add_column :decidim_organizations,
                :force_users_to_authenticate_before_access_organization,
                :boolean,
-               default: false
+               default: false,
+               null: false
   end
 end

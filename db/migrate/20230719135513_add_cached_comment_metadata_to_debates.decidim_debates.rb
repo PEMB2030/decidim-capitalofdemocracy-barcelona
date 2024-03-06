@@ -3,8 +3,7 @@
 
 class AddCachedCommentMetadataToDebates < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_debates_debates, :last_comment_at, :datetime
-    add_column :decidim_debates_debates, :last_comment_by_id, :integer
+    change_table :decidim_debates_debates, bulk: true
     add_column :decidim_debates_debates, :last_comment_by_type, :string
 
     # rubocop:disable Rails/SkipsModelValidations

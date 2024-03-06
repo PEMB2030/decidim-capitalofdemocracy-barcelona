@@ -3,10 +3,8 @@
 
 class CloseAMeeting < ActiveRecord::Migration[5.0]
   def change
-    add_column :decidim_meetings_meetings, :closing_report, :jsonb
-    add_column :decidim_meetings_meetings, :attendees_count, :integer
-    add_column :decidim_meetings_meetings, :contributions_count, :integer
-    add_column :decidim_meetings_meetings, :attending_organizations, :text
-    add_column :decidim_meetings_meetings, :closed_at, :time, index: true
+    change_table :decidim_meetings_meetings, bulk: true
+    add_column :decidim_meetings_meetings, :closed_at, :time
+    add_index :decidim_meetings_meetings, :closed_at
   end
 end

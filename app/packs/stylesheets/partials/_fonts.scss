@@ -1,3 +1,47 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.woff2') format('woff2'),
+       url("fonts/Inter-Regular.otf") format('otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Italic.woff2') format('woff2'),
+      url("fonts/Inter-Italic.otf") format('otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-BoldItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Galano';
+  src: url("fonts/GalanoGrotesque-Bold.woff2") format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Galano';
+  src: url("fonts/GalanoGrotesque-SemiBold.woff2") format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
 body,
 h1,
 h2,

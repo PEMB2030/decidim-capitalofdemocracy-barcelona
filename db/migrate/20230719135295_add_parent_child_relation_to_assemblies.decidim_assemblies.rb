@@ -17,7 +17,7 @@ class AddParentChildRelationToAssemblies < ActiveRecord::Migration[5.1]
     end
 
     add_reference :decidim_assemblies, :parent, index: { name: :decidim_assemblies_assemblies_on_parent_id }
-    add_column :decidim_assemblies, :parents_path, :ltree
+    change_table :decidim_assemblies, bulk: true
     add_column :decidim_assemblies, :children_count, :integer, default: 0
   end
 end

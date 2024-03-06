@@ -9,7 +9,7 @@ class CreateDecidimFormsDisplayConditions < ActiveRecord::Migration[5.1]
       t.bigint :decidim_answer_option_id, index: { name: "decidim_forms_display_condition_answer_option" }
       t.integer :condition_type, default: 0, null: false
       t.jsonb :condition_value
-      t.boolean :mandatory, default: false
+      t.boolean :mandatory, default: false, null: false
 
       t.timestamps
     end

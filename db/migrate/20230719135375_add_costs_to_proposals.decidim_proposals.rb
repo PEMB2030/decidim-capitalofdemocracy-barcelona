@@ -3,8 +3,7 @@
 
 class AddCostsToProposals < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_proposals_proposals, :cost, :decimal
-    add_column :decidim_proposals_proposals, :cost_report, :jsonb
+    change_table :decidim_proposals_proposals, bulk: true
     add_column :decidim_proposals_proposals, :execution_period, :jsonb
   end
 end

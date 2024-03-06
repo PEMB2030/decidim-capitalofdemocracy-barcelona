@@ -3,6 +3,6 @@
 
 class AddEmailOnModerationsToUsers < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_users, :email_on_moderations, :boolean, default: true
+    add_column :decidim_users, :email_on_moderations, :boolean, default: true, null: false
   end
 end

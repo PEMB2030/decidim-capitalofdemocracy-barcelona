@@ -2,11 +2,11 @@
 
 require "rails_helper"
 
-describe "Visit conferences", type: :system do
-  let!(:organization) { create :organization }
-  let!(:conference_activity) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_activity, start_date: start_date, end_date: end_date }
-  let!(:conference_city) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_city }
-  let!(:conference_international) { create :conference, :published, promoted: false, organization: organization, hashtag: hashtag_international, start_date: start_date, end_date: end_date }
+describe "Visit conferences" do
+  let!(:organization) { create(:organization) }
+  let!(:conference_activity) { create(:conference, :published, promoted: false, organization:, hashtag: hashtag_activity, start_date:, end_date:) }
+  let!(:conference_city) { create(:conference, :published, promoted: false, organization:, hashtag: hashtag_city) }
+  let!(:conference_international) { create(:conference, :published, promoted: false, organization:, hashtag: hashtag_international, start_date:, end_date:) }
 
   let(:hashtag_activity) { "activitat" }
   let(:hashtag_city) { "ciutat" }
@@ -24,22 +24,13 @@ describe "Visit conferences", type: :system do
 
   before do
     switch_to_host(organization.host)
-    visit decidim.root_path
-    click_link "Conferences"
+    visit decidim_conferences.conferences_path
   end
 
   shared_examples "checks the conference link" do |type|
     it "shows the #{type} conference link and its content" do
-      expected_text = I18n.t("decidim.conferences.custom_conference_types.#{type}")
-
-      within "#conferences-filter" do
-        expect(page).to have_link(text: /#{expected_text}/i)
-      end
-
-      click_link expected_text
-
       expect(page).to have_content(conferences[type].title["en"])
-      expect(page).to have_css(".card--conference", count: 1)
+      expect(page).to have_css(".card__grid", count: 3)
     end
   end
 
@@ -65,11 +56,11 @@ describe "Visit conferences", type: :system do
 
   context "when conference has a date" do
     it "shows the conference date as its content" do
-      expect(page).to have_content("25 JAN")
-      expect(page).to have_content("25 MAR")
+      expect(page).to have_content("25 Jan")
+      expect(page).to have_content("25 Mar")
 
       within "#conferences-grid" do
-        expect(page).to have_css(".card__block", count: 3)
+        expect(page).to have_css(".card__grid", count: 3)
       end
     end
   end

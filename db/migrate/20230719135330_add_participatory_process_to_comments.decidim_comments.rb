@@ -3,7 +3,7 @@
 
 class AddParticipatoryProcessToComments < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_comments_comments, :decidim_participatory_space_type, :string
+    change_table :decidim_comments_comments, bulk: true
     add_column :decidim_comments_comments, :decidim_participatory_space_id, :integer
 
     add_index :decidim_comments_comments,

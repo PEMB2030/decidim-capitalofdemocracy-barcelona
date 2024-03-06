@@ -6,6 +6,7 @@ class AddRichTextEditorInPublicViewsToOrganizations < ActiveRecord::Migration[5.
     add_column :decidim_organizations,
                :rich_text_editor_in_public_views,
                :boolean,
-               default: false
+               default: false,
+               null: false
   end
 end

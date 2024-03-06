@@ -18,10 +18,10 @@ class AddConferences < ActiveRecord::Migration[5.2]
       t.jsonb :description, null: false
       t.string :hero_image
       t.string :banner_image
-      t.boolean :promoted, default: false
+      t.boolean :promoted, default: false, null: false
       t.datetime :published_at
       t.jsonb :objectives, null: false
-      t.boolean :show_statistics, default: false
+      t.boolean :show_statistics, default: false, null: false
       t.date :start_date
       t.date :end_date
       t.boolean :scopes_enabled, null: false, default: true
