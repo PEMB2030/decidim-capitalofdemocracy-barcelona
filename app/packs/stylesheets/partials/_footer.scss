@@ -37,6 +37,10 @@ background-color: var(--primary-color) !important;
 }
 
 .footer-logo {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   img {
     height: 40px;
     margin-right: 2rem;
@@ -48,9 +52,19 @@ background-color: var(--primary-color) !important;
 }
 
 @media print, screen and (min-width: 577px) {
-  .footer-logo {  
-    img {
-      height: 50px;
+  .footer-logo {
+    align-items: normal;
+
+    a {
+      img {
+        width: 160px;
+        height: auto;
+      }
+      &:first-child {
+        img {
+          width: 200px;
+        }
+      }
     }
   }
 }

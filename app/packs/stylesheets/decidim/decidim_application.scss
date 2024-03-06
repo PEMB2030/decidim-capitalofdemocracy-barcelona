@@ -19,16 +19,6 @@
   }
 }
 
-/* custom logos bcn */
-#bcn-logo {
-  position: absolute;
-  right: 0;
-  top: 20%;
-  img {
-    height: 46px !important;
-  }
-}
-
 .mobile_menu__language-container {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -46,19 +36,6 @@ div#breadcrumb-main-dropdown-mobile {
   margin-bottom: 1px;
 }
 
-@media (max-width: 900px){
-  .main-bar {
-    .lg\:hidden {
-        margin-right: 4em;
-    }
-  }
-}
-@media (min-width: 900px) and (max-width: 1240px){
-  header .main-bar__container {
-    padding-right: 4em;
-  }
-}
-
 @media (max-width: 768px){
   .main-bar__logo img {
     margin: 0 2rem 0 0;
@@ -66,5 +43,40 @@ div#breadcrumb-main-dropdown-mobile {
 
   .menu-bar__main-dropdown__menu li a{
     color: #ffff;
+  }
+}
+
+// Errors introduced by https://github.com/decidim/decidim/pull/12390
+//  Decidim fix for https://github.com/decidim/decidim/pull/12559
+[data-dialog] > * {
+  --tw-translate-x: -50%;
+}
+// fix for password, comes from this change 
+.input-group__password {
+  @apply w-full relative;
+
+  input {
+    @apply w-full;
+  }
+
+  button {
+    @apply absolute right-2 top-8;
+  }
+}
+header {
+  .menu-bar {
+    &__dropdown-content {
+      @apply absolute z-20 top-full left-8 cursor-auto
+    }
+    &-secondary {
+      @apply absolute z-20 top-[calc(100%+12px)] left-0;
+    }
+  }
+}
+.home {
+  &__section-header {
+    .button {
+      @apply md:ml-auto;
+    }
   }
 }
