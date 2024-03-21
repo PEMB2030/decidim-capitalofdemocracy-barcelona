@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: 99b3885c54fb764c8b824ae3313ff6004eb3b3ee
+  revision: 1ddb589908159556501477a664890db4dc3aea73
   branch: develop
   specs:
     decidim-decidim_awesome (0.11.0)
@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 9c28104fed2a76ca2da7b3e2223d5e72bdc287e1
+  revision: f6b2d6d38dbb033f62a13067e9a07a789938885a
   branch: release/0.28-stable
   specs:
     decidim (0.28.0)
@@ -176,7 +176,6 @@ GIT
     decidim-surveys (0.28.0)
       decidim-core (= 0.28.0)
       decidim-forms (= 0.28.0)
-      decidim-templates (= 0.28.0)
     decidim-system (0.28.0)
       active_link_to (~> 1.0)
       decidim-core (= 0.28.0)
@@ -200,7 +199,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
-  revision: cd1a0a8c0a0e53f44a0b333a8daa4fddfd84304c
+  revision: aa4bc12b2eff47820bebc4ecad317df6e3571b9d
   branch: upgrade-28
   specs:
     decidim-newsletter_agenda (1.1.0)
@@ -279,16 +278,16 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.895.0)
-    aws-sdk-core (3.191.3)
+    aws-partitions (1.899.0)
+    aws-sdk-core (3.191.4)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.77.0)
+    aws-sdk-kms (1.78.0)
       aws-sdk-core (~> 3, >= 3.191.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.143.0)
+    aws-sdk-s3 (1.146.0)
       aws-sdk-core (~> 3, >= 3.191.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.8)
@@ -297,14 +296,14 @@ GEM
     base64 (0.2.0)
     batch-loader (1.5.0)
     bcrypt (3.1.20)
-    better_html (2.0.2)
+    better_html (2.1.1)
       actionview (>= 6.0)
       activesupport (>= 6.0)
       ast (~> 2.0)
       erubi (~> 1.4)
       parser (>= 2.4)
       smart_properties
-    bigdecimal (3.1.6)
+    bigdecimal (3.1.7)
     bindex (0.8.1)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
@@ -400,9 +399,9 @@ GEM
       temple
     erubi (1.12.0)
     escape_utils (1.2.2)
-    et-orbi (1.2.7)
+    et-orbi (1.2.9)
       tzinfo
-    excon (0.109.0)
+    excon (0.110.0)
     extended-markdown-filter (0.7.0)
       html-pipeline (~> 2.9)
     factory_bot (6.4.6)
@@ -457,7 +456,7 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     htmlentities (4.3.4)
-    i18n (1.14.1)
+    i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     i18n-tasks (1.0.13)
       activesupport (>= 4.0.2)
@@ -519,10 +518,10 @@ GEM
     method_source (1.0.0)
     mime-types (3.5.2)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2024.0206)
+    mime-types-data (3.2024.0305)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
-    minitest (5.22.2)
+    minitest (5.22.3)
     msgpack (1.7.2)
     multi_xml (0.6.0)
     net-http (0.4.1)
@@ -536,8 +535,8 @@ GEM
       timeout
     net-smtp (0.3.4)
       net-protocol
-    nio4r (2.7.0)
-    nokogiri (1.16.2-x86_64-linux)
+    nio4r (2.7.1)
+    nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -584,7 +583,7 @@ GEM
       activerecord (>= 5.2)
       request_store (~> 1.1)
     parallel (1.24.0)
-    parallel_tests (4.5.1)
+    parallel_tests (4.5.2)
       parallel
     parser (3.3.0.5)
       ast (~> 2.4.1)
@@ -594,7 +593,7 @@ GEM
       activerecord (>= 5.2)
       activesupport (>= 5.2)
     polyglot (0.3.5)
-    premailer (1.22.0)
+    premailer (1.23.0)
       addressable
       css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)
@@ -609,7 +608,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.7.3)
-    rack (2.2.8.1)
+    rack (2.2.9)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-cors (1.1.1)
@@ -694,14 +693,14 @@ GEM
     rspec-mocks (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (6.1.1)
+    rspec-rails (6.1.2)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
-      rspec-core (~> 3.12)
-      rspec-expectations (~> 3.12)
-      rspec-mocks (~> 3.12)
-      rspec-support (~> 3.12)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
     rspec-support (3.13.1)
@@ -717,7 +716,7 @@ GEM
       rubocop-ast (>= 1.28.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.31.1)
+    rubocop-ast (1.31.2)
       parser (>= 3.3.0.4)
     rubocop-capybara (2.20.0)
       rubocop (~> 1.41)
