@@ -35,7 +35,7 @@ module Decidim
 
       def processed_welcome_text
         text_parts = translated_welcome_text.split("<br>", 2)
-        content = content_tag(:span, sanitize(text_parts[0]), class: "no-wrap")
+        content = sanitize(text_parts[0])
         content + (text_parts[1] ? ("<br>".html_safe + sanitize(text_parts[1])) : "")
       end
 
@@ -43,8 +43,9 @@ module Decidim
       # the model doesn't respond to cache_key_with_version nor updated_at method
       def cache_hash
         hash = []
-        hash << "decidim/content_blocks/hero"
+        hash << "decidim/content_blocks/extended_hero"
         hash << Digest::MD5.hexdigest(model.attributes.to_s)
+        hash << Digest::MD5.hexdigest(model.settings.to_s)
         hash << current_organization.cache_key_with_version
         hash << I18n.locale.to_s
         hash << background_image

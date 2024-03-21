@@ -3,7 +3,7 @@
 
 class AddDeletedFieldsToUsers < ActiveRecord::Migration[5.0]
   def change
-    add_column :decidim_users, :delete_reason, :text
+    change_table :decidim_users, bulk: true
     add_column :decidim_users, :deleted_at, :datetime
   end
 end

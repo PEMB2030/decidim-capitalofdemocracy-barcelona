@@ -1,4 +1,4 @@
-<div class="flex flex--sc mb-s">
+<div class="flex flex-row md:flex-col gap-1 flex-wrap">
   <% custom_conference_types = Rails.application.secrets.custom_conference_types || [] %>
   <% current_type = params[:type] %>
   <% all_active = current_type.blank? %>
@@ -10,7 +10,8 @@
 
       <%= link_to I18n.t(item[:key], scope: "decidim.conferences.custom_conference_types"),
                   conferences_path(type: item[:key]),
-                  class: "button button--sc #{item[:key]} conference-button #{is_active ? 'active-btn' : 'inactive-btn'}" %>
+                  # class: "bg-city bg-international bg-activity",  keep it for tailwind preprocessor
+                  class: "button button__xs md:button__lg uppercase flex #{item[:key]} bg-#{item[:key]} text-white #{is_active ? 'opacity-100' : 'opacity-50'}" %>
     <% end %>
   <% end %>
 </div>

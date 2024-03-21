@@ -3,7 +3,7 @@
 
 class AddCommentsAndRepliesNotificationsToUsers < ActiveRecord::Migration[5.0]
   def change
-    add_column :decidim_users, :comments_notifications, :boolean, null: false, default: false
+    change_table :decidim_users, bulk: true
     add_column :decidim_users, :replies_notifications, :boolean, null: false, default: false
   end
 end

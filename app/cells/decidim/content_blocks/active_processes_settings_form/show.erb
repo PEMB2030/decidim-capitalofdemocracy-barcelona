@@ -1,15 +1,15 @@
-<ul class="tabs" data-tabs id="active-processes-tabs">
+<ul class="tabs tab-x-container mb-8" data-tabs id="active-processes-tabs">
   <% (1..3).each do |i| %>
     <li class="tabs-title <%= 'is-active' if i == 1 %>">
-      <a href="#panel<%= i %>" <%= 'aria-selected="true"' if i == 1 %> data-tabs-target="panel<%= i %>">Item <%= i %></a>
+      <a class="tab-x" href="#active-processes-panel-<%= i %>" <%= 'aria-selected="true"' if i == 1 %> data-tabs-target="active-processes-panel-<%= i %>">Item <%= i %></a>
     </li>
   <% end %>
 </ul>
 
 <div class="tabs-content" data-tabs-content="active-processes-tabs">
   <% (1..3).each do |i| %>
-    <div class="tabs-panel <%= 'is-active' if i == 1 %>" id="panel<%= i %>">
-      <fieldset class="fieldset">
+    <div class="tabs-panel <%= 'is-active' if i == 1 %>" id="active-processes-panel-<%= i %>">
+      <fieldset class="fieldset form__wrapper">
         <% form.fields_for :settings, form.object.settings do |settings_fields| %>
           <%= settings_fields.translated :text_field,  "link_text_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_text") %>
           <%= settings_fields.text_field "link_url_#{i}".to_sym, label: t("decidim.content_blocks.active_processes_settings_form.link_url") %>
@@ -24,10 +24,24 @@
       </fieldset>
     </div>
   <% end %>
-  <fieldset class="fieldset">
+  <fieldset class="fieldset form__wrapper">
     <% form.fields_for :settings, form.object.settings do |settings_fields| %>
       <%= settings_fields.translated :text_field, :button_text, label: t("decidim.content_blocks.active_processes_settings_form.button_text") %>
       <%= settings_fields.text_field :button_url, label: t("decidim.content_blocks.active_processes_settings_form.button_url") %>
     <% end %>
   </fieldset>
 </div>
+<style>
+  .tab-x[aria-selected="true"] {
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--secondary-rgb) / 1);
+    border-color: rgb(var(--secondary-rgb) / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(var(--secondary-rgb) / 1);
+    color: rgb(var(--secondary-rgb) / var(--tw-text-opacity));
+  }
+  input[type="color"] {
+    margin: 0 1em;
+    vertical-align: middle;
+  }
+</style>

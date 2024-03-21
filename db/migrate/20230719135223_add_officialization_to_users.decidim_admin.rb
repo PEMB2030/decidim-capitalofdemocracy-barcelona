@@ -3,7 +3,7 @@
 
 class AddOfficializationToUsers < ActiveRecord::Migration[5.1]
   def change
-    add_column :decidim_users, :officialized_at, :datetime
+    change_table :decidim_users, bulk: true
     add_column :decidim_users, :officialized_as, :jsonb
 
     add_index :decidim_users, :officialized_at

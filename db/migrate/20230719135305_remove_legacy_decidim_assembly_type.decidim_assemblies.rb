@@ -3,7 +3,7 @@
 
 class RemoveLegacyDecidimAssemblyType < ActiveRecord::Migration[5.2]
   def change
-    remove_column :decidim_assemblies, :assembly_type, :string
+    change_table :decidim_assemblies, bulk: true
     remove_column :decidim_assemblies, :assembly_type_other, :jsonb
   end
 end

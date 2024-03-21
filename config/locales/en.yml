@@ -1,15 +1,67 @@
 ---
 en:
+  activerecord:
+    models:
+      decidim/conference:
+        one: Act
+        other: Acts
+      decidim/conference_speaker:
+        one: Act speaker
+        other: Act speakers
+      decidim/conference_user_role:
+        one: Act user role
+        other: Act user roles
+  devise:
+    mailer:
+      join_conference:
+        subject: Invitation to join an act 
   decidim:
+    pages:
+      index:
+        subheading: Browse through the Barcelona Capital of Democracy help pages
+    statistics:
+      conferences_count: Acts
+    menu:
+      conferences: Programme
+    admin:
+      actions:
+        new_conference: New Act
+      menu:
+        conferences: Acts
+      models:
+        conference_speaker:
+          name: Act Speaker
+        conference_user_role:
+          name:  Act Admin
+        registration_type:
+          fields:
+            conference_meetings: Act meetings
+      titles:
+        conferences: Acts
+    meetings:
+      conference_venues: Act venues 
     conferences:
+      events:
+        conferences:
+          conference_registration_validation_pending:
+            notification_title: Your registration to the act <a href="%{resource_url}">%{resource_title}</a> is pending to be confirmed.
+      index:
+        title: Acts
+      content_blocks:
+        highlighted_conferences:
+          name: Highlighted acts
       pages:
         home:
           highlighted_conferences:
             active_conferences: Highlighted acts
+            see_all_conferences: See all acts
       custom_conference_types:
         activity: Side events
         city: City acts
         international: Global acts
+    home:
+      statistics:
+        headline: Participation
     content_blocks:
       active_processes:
         name: Active processes
@@ -36,6 +88,13 @@ en:
         welcome_text: Welcome title
   layouts:
     decidim:
+      conferences:
+        index:
+          promoted_conferences: Highlighted acts
+        order_by_conferences:
+          conferences:
+            one: "%{count} act"
+            other: "%{count} acts"
       footer:
         accessibility: Accessibility
         cookie_settings: Cookie settings
@@ -46,6 +105,8 @@ en:
         logo_title: European Capital of Democracy
       main_footer:
         logo_title: European Capital of Democracy
+      process_navigation:
+        process_menu_item: Welcome
   locale:
     locale_name:
       ca: cat

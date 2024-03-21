@@ -1,3 +1,0 @@
-<!-- replace 'erb[silent]:contains("if organization.logo.attached?")' closing_selector 'erb[silent]:contains("end")' -->
-
-<%= render partial: "layouts/capitalitat/header_logo", locals: {organization: organization} %>

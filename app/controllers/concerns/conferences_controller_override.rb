@@ -24,7 +24,7 @@ module ConferencesControllerOverride
     end
 
     def collection
-      sorted_conferences
+      paginate(sorted_conferences)
     end
 
     def sorted_conferences

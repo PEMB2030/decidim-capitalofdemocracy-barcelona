@@ -3,9 +3,7 @@
 
 class TranslateProcesses < ActiveRecord::Migration[5.0]
   def change
-    remove_column :decidim_participatory_processes, :title
-    remove_column :decidim_participatory_processes, :subtitle
-    remove_column :decidim_participatory_processes, :description
+    change_table :decidim_participatory_processes, bulk: true
     remove_column :decidim_participatory_processes, :short_description
 
     change_table :decidim_participatory_processes do |t|

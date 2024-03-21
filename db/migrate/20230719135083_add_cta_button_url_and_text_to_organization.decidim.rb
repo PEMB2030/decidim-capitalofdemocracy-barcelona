@@ -3,7 +3,7 @@
 
 class AddCtaButtonUrlAndTextToOrganization < ActiveRecord::Migration[5.1]
   def change
-    add_column :decidim_organizations, :cta_button_text, :jsonb
+    change_table :decidim_organizations, bulk: true
     add_column :decidim_organizations, :cta_button_path, :string
   end
 end

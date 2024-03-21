@@ -3,7 +3,7 @@
 
 class AddSuspensionFieldsToDecidimUsers < ActiveRecord::Migration[5.2]
   def change
-    add_column :decidim_users, :suspended, :boolean, default: false, null: false
+    change_table :decidim_users, bulk: true
     add_column :decidim_users, :suspended_at, :datetime
   end
 end

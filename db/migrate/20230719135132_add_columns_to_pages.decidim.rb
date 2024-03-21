@@ -8,7 +8,7 @@ class AddColumnsToPages < ActiveRecord::Migration[5.2]
 
   # rubocop:disable Rails/SkipsModelValidations
   def change
-    change_table :decidim_static_pages do |t|
+    change_table :decidim_static_pages, bulk: true do |t|
       t.column :weight, :integer, default: nil, null: true
       t.column :show_in_footer, :boolean, default: false, null: false
     end

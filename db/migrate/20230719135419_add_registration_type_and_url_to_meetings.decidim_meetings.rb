@@ -8,7 +8,7 @@ class AddRegistrationTypeAndUrlToMeetings < ActiveRecord::Migration[5.2]
   end
 
   def change
-    add_column :decidim_meetings_meetings, :registration_type, :string, null: false, default: "registration_disabled"
+    change_table :decidim_meetings_meetings, bulk: true
     add_column :decidim_meetings_meetings, :registration_url, :string
 
     Meetings.reset_column_information

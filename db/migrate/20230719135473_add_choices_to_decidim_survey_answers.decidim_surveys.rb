@@ -11,7 +11,7 @@ class AddChoicesToDecidimSurveyAnswers < ActiveRecord::Migration[5.1]
   end
 
   def up
-    add_column :decidim_surveys_survey_answers, :text_body, :text
+    change_table :decidim_surveys_survey_answers, bulk: true
     add_column :decidim_surveys_survey_answers, :choices, :jsonb, default: []
 
     SurveyAnswer.find_each do |answer|
@@ -41,7 +41,7 @@ class AddChoicesToDecidimSurveyAnswers < ActiveRecord::Migration[5.1]
       end
     end
 
-    remove_column :decidim_surveys_survey_answers, :choices
+    change_table :decidim_surveys_survey_answers, bulk: true
 
     remove_column :decidim_surveys_survey_answers, :body
     rename_column :decidim_surveys_survey_answers, :jsonb_body, :body

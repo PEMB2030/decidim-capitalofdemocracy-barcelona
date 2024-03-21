@@ -7,7 +7,7 @@ class AddPreviousPasswordsToUsers < ActiveRecord::Migration[6.1]
   end
 
   def change
-    add_column :decidim_users, :password_updated_at, :datetime
+    change_table :decidim_users, bulk: true
     add_column :decidim_users, :previous_passwords, :string, array: true, default: []
 
     reversible do |direction|
