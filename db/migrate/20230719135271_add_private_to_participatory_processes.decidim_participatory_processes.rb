@@ -3,6 +3,6 @@
 
 class AddPrivateToParticipatoryProcesses < ActiveRecord::Migration[5.1]
   def change
-    add_column :decidim_participatory_processes, :private_space, :boolean, default: false
+    add_column :decidim_participatory_processes, :private_space, :boolean, default: false, null: false
   end
 end

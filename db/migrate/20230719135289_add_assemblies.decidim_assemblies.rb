@@ -19,7 +19,7 @@ class AddAssemblies < ActiveRecord::Migration[5.0]
       t.jsonb :description, null: false
       t.string :hero_image
       t.string :banner_image
-      t.boolean :promoted, default: false
+      t.boolean :promoted, default: false, null: false
       t.datetime :published_at
       t.jsonb :developer_group
       t.jsonb :meta_scope
@@ -27,7 +27,7 @@ class AddAssemblies < ActiveRecord::Migration[5.0]
       t.jsonb :target
       t.jsonb :participatory_scope
       t.jsonb :participatory_structure
-      t.boolean :show_statistics, default: false
+      t.boolean :show_statistics, default: false, null: false
       t.integer :decidim_scope_id
 
       t.index [:decidim_organization_id, :slug],

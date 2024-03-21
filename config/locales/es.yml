@@ -1,15 +1,67 @@
 ---
 es:
+  activerecord:
+    models:
+      decidim/conference:
+        one: Acto
+        other: Actos
+      decidim/conference_speaker:
+        one: Ponente del acto
+        other: Ponentes del acto
+      decidim/conference_user_role:
+        one: Rol de participante del acto
+        other: Roles de participante del acto
+  devise:
+    mailer:
+      join_conference:
+        subject: Invitación para unirse a un acto
   decidim:
+    pages:
+      index:
+        subheading: Navegar por las páginas de ayuda de %{name}
+    statistics:
+      conferences_count: Actos
+    menu:
+      conferences: Programa
+    admin:
+      actions:
+        new_conference: Nuevo acto
+      menu:
+        conferences: Actos
+      models:
+        conference_speaker:
+          name: Ponente del acto
+        conference_user_role:
+          name:  Administradora del acto
+        registration_type:
+          fields:
+            conference_meetings: Encuentros del acto
+      titles:
+        conferences: Actos
+    meetings:
+      conference_venues: Sedes de los actos
     conferences:
+      events:
+        conferences:
+          conference_registration_validation_pending:
+            notification_title: Tu inscripción en la jornada <a href="%{resource_url}">%{resource_title}</a> está pendiente de confirmación.
+      index:
+        title: Actos
+      content_blocks:
+        highlighted_conferences:
+          name: Actos destacados
       pages:
         home:
           highlighted_conferences:
             active_conferences: Actos destacados
+            see_all_conferences: Ver todos los actos
       custom_conference_types:
         activity: Actividades paralelas
         city: Actos de la ciudad
         international: Actos internacionales
+    home:
+      statistics:
+        headline: Participación
     content_blocks:
       active_processes:
         name: Procesos activos
@@ -37,6 +89,13 @@ es:
   hello: Hola mundo
   layouts:
     decidim:
+      conferences:
+        index:
+          promoted_conferences: Actos destacados
+        order_by_conferences:
+          conferences:
+            one: "%{count} acto"
+            other: "%{count} actos"
       footer:
         accessibility: Accesibilidad
         cookie_settings: Configuración de cookies
@@ -46,6 +105,8 @@ es:
         logo_title: Capital Europea de la Democracia
       main_footer:
         logo_title: Capital Europea de la Democracia
+      process_navigation:
+        process_menu_item: Bienvenida
   locale:
     locale_name:
       ca: cat

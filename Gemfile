@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "0.27-backports" }.freeze
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.28-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -13,9 +13,9 @@ gem "decidim-conferences", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
-gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda", branch: "fix/canodrom-template"
-gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "develop"
+gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda", branch: "upgrade-28"
+gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "master"
 
 gem "bootsnap", "~> 1.7"
 
@@ -28,7 +28,7 @@ gem "omniauth-decidim"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-  gem "faker", "~> 2.14"
+  gem "faker", "~> 3.2"
 
   gem "brakeman"
   gem "decidim-dev", DECIDIM_VERSION

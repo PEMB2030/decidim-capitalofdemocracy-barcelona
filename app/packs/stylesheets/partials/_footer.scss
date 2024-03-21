@@ -1,75 +1,95 @@
+.main-footer__language {
+    z-index: 20;
+    background-color: white;
+    outline: none !important;
+    width: 10rem;
+   
+    border-color: #E1E5EF;
+}
+.main-footer__badge {
+  display: block;
+  width: 140px;
+}
+
 @media print, screen and (min-width: 64em) {
+  .main-footer {
+    position: relative;
+  }
   .main-footer__badge {
     position: absolute;
-    top: -3rem;
+    bottom: 6.5rem;
   }
 }
 
 .main-footer,
 .mini-footer {
-  background-color: $capitalitat-violet !important;
+background-color: var(--primary-color) !important;
 }
 
-.footer__logo-title {
-  margin: 0;
-  width: 150px;
-  line-height: 1rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.02rem;
+.main-footer__down,
+.mini-footer {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
 
-.main-footer a, .mini-footer a {
-  color: #ffffff;
+.main-footer__down {
+  border-top: none !important;
 }
 
-.footer-social__icon .icon {
-  width: 26px;
-  height: 26px;
-}
+.footer-logo {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-@media print, screen and (min-width: 40em) {
-  .logos img {
-    margin-right: 1rem;
+  img {
+    height: 40px;
+    margin-right: 2rem;
   }
 
-  .logos img:last-child {
-    margin-right: 0;
+  svg.fill-current {
+    display: none;
   }
+}
 
-  .footer-nav {
-    padding-top: 0;
-  }
-
+@media print, screen and (min-width: 577px) {
   .footer-logo {
-    margin-right: 1rem;
-    display: block;
-    img {
-      height: 50px;
+    align-items: normal;
+
+    a {
+      img {
+        width: 160px;
+        height: auto;
+      }
+      &:first-child {
+        img {
+          width: 200px;
+        }
+      }
     }
   }
 }
 
-@media print, screen and (max-width: 40em) {
-  .logos img,
-  .logos a {
-    margin-top: 2rem;
-    height: 40px;
+.mini-footer__content {
+  svg.fill-current {
+    display: none;
   }
+}
 
-  .logos a img {
-    margin-top: 0;
-  }
+.decidim-logo {
+  width: 140px;
+}
 
-  .logos img:last-child {
-    margin-right: 0;
-  }
-
-  .logos {
-    flex-direction: column;
-  }
-
-  .main-footer__content {
-    flex-direction: column-reverse;
+.first-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  .cc-badge {
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

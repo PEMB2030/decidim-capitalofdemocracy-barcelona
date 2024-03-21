@@ -3,7 +3,7 @@
 
 class ExtendUserProfile < ActiveRecord::Migration[5.1]
   def change
-    add_column :decidim_users, :personal_url, :string
+    change_table :decidim_users, bulk: true
     add_column :decidim_users, :about, :text
   end
 end

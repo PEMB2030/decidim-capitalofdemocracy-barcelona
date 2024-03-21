@@ -1,0 +1,20 @@
+<!-- replace "erb[loud]:contains('layouts/decidim/footer/main_intro')" -->
+
+<div class="logos footer-logo">
+	<%= link_to "https://capitalofdemocracy.eu/", target: "_blank" do %>
+	  <%= image_pack_tag("media/images/logo_capitalitat_white.png") %>
+	<% end %>
+
+	<%= link_to "https://ajuntament.barcelona.cat", target: "_blank" do %>
+	  <%=image_pack_tag("media/images/logo-bcnweb.svg") %>
+	<% end %>
+
+	<%= link_to "https://compromismetropolita.cat/ca/compromis-metropolita-2030#section-56", target: "_blank" do %>
+	  <%=image_pack_tag("media/images/logo_pemb_white.svg") %>
+	<% end %>
+</div>
+
+<div class="text-sm text-white prose">
+  <p><%= t("decidim.pages.home.footer_sub_hero.footer_sub_hero_headline", organization: current_organization.name) %></p>
+  <p><%= organization_description_label %></p>
+</div>

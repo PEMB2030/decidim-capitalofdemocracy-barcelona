@@ -13,10 +13,8 @@ class MergeMeetingsMinutesIntoMeetingsTable < ActiveRecord::Migration[6.0]
   end
 
   def up
-    add_column :decidim_meetings_meetings, :minutes_description, :jsonb
-    add_column :decidim_meetings_meetings, :video_url, :string
-    add_column :decidim_meetings_meetings, :audio_url, :string
-    add_column :decidim_meetings_meetings, :minutes_visible, :boolean
+    change_table :decidim_meetings_meetings, bulk: true
+    add_column :decidim_meetings_meetings, :minutes_visible, :boolean, default: false, null: false
 
     Minutes.find_each do |minutes|
       minutes.meeting.update!(
@@ -41,9 +39,7 @@ class MergeMeetingsMinutesIntoMeetingsTable < ActiveRecord::Migration[6.0]
       )
     end
 
-    remove_column :decidim_meetings_meetings, :minutes_description
-    remove_column :decidim_meetings_meetings, :video_url
-    remove_column :decidim_meetings_meetings, :audio_url
+    change_table :decidim_meetings_meetings, bulk: true
     remove_column :decidim_meetings_meetings, :minutes_visible
   end
 end

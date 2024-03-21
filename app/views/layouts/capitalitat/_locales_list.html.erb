@@ -1,9 +1,8 @@
-<!--TODO: change locales array to available_locales-->
-<% if %w(en ca es).length > 1 %>
+<% if current_organization.available_locales.length > 1 %>
   <div class="hide-for-medium" data-set="nav-locale">
     <div class="row column">
       <div class="flex--sbc nav-locales locales">
-        <% %w(en ca es).each do |locale| %>
+        <% current_organization.available_locales.each do |locale| %>
           <%= link_to I18n.t("locale_name.#{locale}", scope: "locale").upcase, decidim.locale_path(locale: locale), method: :post, role: "menuitem", lang: locale %>
         <% end %>
       </div>

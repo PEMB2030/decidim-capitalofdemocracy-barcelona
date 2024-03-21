@@ -1,15 +1,67 @@
 ---
 ca:
+  activerecord:
+    models:
+      decidim/conference:
+        one: Acte
+        other: Actes
+      decidim/conference_speaker:
+        one: Ponent de l'acte
+        other: Ponents de l'acte
+      decidim/conference_user_role:
+        one: Rol de participant de l'acte
+        other: Rols de participant de l'acte
+  devise:
+    mailer:
+      join_conference:
+        subject: Invitació per a unir-se a un acte
   decidim:
+    pages:
+      index:
+        subheading: Navega per les pàgines d'ajuda de %{name}
+    statistics:
+      conferences_count: Actes
+    menu:
+      conferences: Programa
+    admin:
+      actions:
+        new_conference: Nou acte
+      menu:
+        conferences: Actes
+      models:
+        conference_speaker:
+          name: Ponent de l'acte
+        conference_user_role:
+          name:  Administradora de l'acte
+        registration_type:
+          fields:
+            conference_meetings: Trobades de l'acte
+      titles:
+        conferences: Actes
+    meetings:
+      conference_venues: Seus dels actes
     conferences:
+      events:
+        conferences:
+          conference_registration_validation_pending:
+            notification_title: La teva inscripció a l'acte <a href="%{resource_url}">%{resource_title}</a> està pendent de confirmació.
+      index:
+        title: Actes
+      content_blocks:
+        highlighted_conferences:
+          name: Actes destacats
       pages:
         home:
           highlighted_conferences:
             active_conferences: Actes destacats
+            see_all_conferences: Veure tots els actes
       custom_conference_types:
         activity: Activitats Paral·leles
         city: Actes de la ciutat
         international: Actes internacionals
+    home:
+      statistics:
+        headline: Participació
     content_blocks:
       active_processes:
         name: Processos actius
@@ -36,6 +88,13 @@ ca:
         welcome_text: Títol de benvinguda
   layouts:
     decidim:
+      conferences:
+        index:
+          promoted_conferences: Actes destacats
+        order_by_conferences:
+          conferences:
+            one: "%{count} acte"
+            other: "%{count} actes"
       footer:
         accessibility: Accessibilitat
         cookie_settings: Configuració de galetes
@@ -45,6 +104,8 @@ ca:
         logo_title: Capital Europea de la Democràcia
       main_footer:
         logo_title: Capital Europea de la Democràcia
+      process_navigation:
+        process_menu_item: Benvinguda
   locale:
     locale_name:
       ca: cat

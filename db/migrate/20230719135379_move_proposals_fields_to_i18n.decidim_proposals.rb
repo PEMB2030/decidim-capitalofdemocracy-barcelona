@@ -3,7 +3,7 @@
 
 class MoveProposalsFieldsToI18n < ActiveRecord::Migration[5.2]
   def up
-    add_column :decidim_proposals_proposals, :new_title, :jsonb
+    change_table :decidim_proposals_proposals, bulk: true
     add_column :decidim_proposals_proposals, :new_body, :jsonb
 
     reset_column_information
@@ -44,7 +44,7 @@ class MoveProposalsFieldsToI18n < ActiveRecord::Migration[5.2]
   end
 
   def down
-    add_column :decidim_proposals_proposals, :new_title, :string
+    change_table :decidim_proposals_proposals, bulk: true
     add_column :decidim_proposals_proposals, :new_body, :string
 
     reset_column_information
