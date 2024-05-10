@@ -2,6 +2,7 @@
 
 Rails.application.config.to_prepare do
   Decidim::Conferences::ContentBlocks::HighlightedConferencesCell.prepend(Decidim::Conferences::ContentBlocks::HighlightedConferencesCellOverride)
+  Decidim::Conferences::ConferenceHelper.include(ConferenceHelperOverride)
   Decidim::Conference.include(ConferenceOverride)
 end
 
