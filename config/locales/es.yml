@@ -112,3 +112,7 @@ es:
       ca: cat
       en: eng
       es: es
+  capital:
+    speakers_divisor:
+      participants: Participantes
+      gamers: Gamers

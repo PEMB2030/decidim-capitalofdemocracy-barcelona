@@ -1,0 +1,29 @@
+<!-- replace "#conference_speakers-grid" -->
+
+<% divisor = Rails.application.secrets.speakers_divisor.dig(conference.slug.to_sym) %>
+
+<section id="conference_speakers-grid">
+  <% if divisor && divisor.respond_to?(:each) %>
+    <% all_filters = divisor.pluck(:position_filter).flatten.filter(&:presence) %>
+    <% divisor.each do |part| %>
+      <h1 class="title-decorator my-12">
+        <span><%= t("capital.speakers_divisor.#{part[:name]}") %></span>
+      </h1>
+      <div class="conference__speaker__container">
+        <% if part[:position_filter].present? %>
+          <%= render collection.select { |speaker| translated_attribute(speaker.position).downcase.in?(part[:position_filter]) } %>
+        <% else %>
+          <%= render collection.select { |speaker| !translated_attribute(speaker.position).downcase.in?(all_filters) } %>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <h1 class="title-decorator my-12">
+      <span class="not-sr-only"><%= t("decidim.conferences.conference_speakers.index.speakers", count: "") %></span>
+      <span class="sr-only"><%= t("decidim.conferences.conference_speakers.index.speakers", count: "") %> (<%= translated_attribute current_participatory_space.title %>)</span>
+    </h1>
+    <div class="conference__speaker__container">
+      <%= render(collection) %>
+    </div>
+  <% end %>
+</section>

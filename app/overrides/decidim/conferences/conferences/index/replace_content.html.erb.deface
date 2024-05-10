@@ -1,5 +1,5 @@
 <!-- replace "h1" -->
 
 <section id="conferences-filter">
-	<%= render partial: "capitalitat/conferences_buttons" %>
+  <%= render partial: "capitalitat/conferences_buttons" %>
 </section>
