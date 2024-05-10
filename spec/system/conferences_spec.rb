@@ -64,4 +64,55 @@ describe "Visit conferences" do
       end
     end
   end
+
+  context "when speakers" do
+    let(:conference) { conference_city }
+    let!(:speaker1) { create(:conference_speaker, conference:, position: { en: "Random position" }) }
+    let!(:speaker2) { create(:conference_speaker, conference:, position: { en: "Gamer" }) }
+    let(:divisor) do
+      [{
+        name: :participants
+      },
+       {
+         name: :gamers,
+         position_filter: "gamer"
+       }]
+    end
+
+    before do
+      allow(Rails.application.secrets.speakers_divisor).to receive(:dig).and_call_original
+      allow(Rails.application.secrets.speakers_divisor).to receive(:dig).with(conference_city.slug.to_sym).and_return(divisor)
+      visit decidim_conferences.conference_conference_speakers_path(conference_slug: conference.slug)
+    end
+
+    it "has separate speakers" do
+      within first(".title-decorator") do
+        expect(page).to have_content("Participants")
+      end
+      within first(".conference__speaker__container") do
+        expect(page).to have_content(speaker1.full_name)
+      end
+      within all(".title-decorator").last do
+        expect(page).to have_content("Gamers")
+      end
+      within all(".conference__speaker__container").last do
+        expect(page).to have_content(speaker2.full_name)
+      end
+    end
+
+    context "when no divisor" do
+      let(:conference) { conference_activity }
+
+      it "has only one set of speakers" do
+        within ".title-decorator" do
+          expect(page).to have_content("Speakers")
+        end
+        within ".conference__speaker__container" do
+          expect(page).to have_content(speaker1.full_name)
+          expect(page).to have_content(speaker2.full_name)
+        end
+        expect(page).to have_no_content("Gamers")
+      end
+    end
+  end
 end
