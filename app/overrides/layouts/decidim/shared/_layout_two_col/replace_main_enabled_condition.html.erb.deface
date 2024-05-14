@@ -1,3 +1,0 @@
-<!-- replace "erb[silent]:contains('main_enabled = true unless local_assigns.has_key?(:main_enabled)')" -->
-
-<% main_enabled = (content_for?(:aside) && content_for(:aside).present?) unless local_assigns.has_key?(:main_enabled) %>
