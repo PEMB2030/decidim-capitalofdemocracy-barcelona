@@ -15,5 +15,6 @@ module ConferenceHelperOverride
         items
       end
     end
+    # rubocop:enable Style/SingleArgumentDig
   end
 end
