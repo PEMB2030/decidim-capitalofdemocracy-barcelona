@@ -1,5 +1,0 @@
-<!-- surround "erb[loud]:contains('content_for :aside')" closing_selector "erb[silent]:contains('end')" -->
-
-<% unless current_participatory_space.components.empty? %>
-  <%= render_original %>
-<% end %>
