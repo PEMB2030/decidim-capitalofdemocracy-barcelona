@@ -1,14 +1,5 @@
-<!-- replace ".conference__nav-container" -->
+<!-- surround "erb[loud]:contains('content_for :aside')" closing_selector "erb[silent]:contains('end')" -->
 
 <% unless current_participatory_space.components.empty? %>
-  <div class="conference__nav-container">
-    <button id="dropdown-trigger-conference" data-component="dropdown" data-target="dropdown-menu-conference" data-auto-close="true" data-disabled-md="true" data-scroll-to-menu="true">
-      <span><%= t("decidim.searches.filters.jump_to") %></span>
-      <%= icon "arrow-down-s-line" %>
-      <%= icon "arrow-up-s-line" %>
-    </button>
-    <ul id="dropdown-menu-conference" class="conference__nav">
-      <%= render partial: "layouts/decidim/conferences/conference_nav_item", collection: conference_nav_items(current_participatory_space), as: :item %>
-    </ul>
-  </div>
+  <%= render_original %>
 <% end %>
