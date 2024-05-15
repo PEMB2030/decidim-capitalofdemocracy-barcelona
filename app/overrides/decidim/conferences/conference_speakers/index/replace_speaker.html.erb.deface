@@ -1,7 +1,7 @@
 <!-- replace "#conference_speakers-grid" -->
 
 <% divisor = Rails.application.secrets.speakers_divisor.dig(conference.slug.to_sym) %>
-
+<% byebug %>
 <section id="conference_speakers-grid">
   <% if divisor && divisor.respond_to?(:each) %>
     <% all_filters = divisor.pluck(:position_filter).flatten.filter(&:presence) %>
