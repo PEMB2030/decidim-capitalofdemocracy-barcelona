@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_21_180611) do
+ActiveRecord::Schema.define(version: 2024_05_22_142834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1428,6 +1428,7 @@ ActiveRecord::Schema.define(version: 2024_03_21_180611) do
     t.integer "comments_count", default: 0, null: false
     t.integer "follows_count", default: 0, null: false
     t.integer "state", default: 0, null: false
+    t.integer "valuation_assignments_count", default: 0
     t.index "md5((body)::text)", name: "decidim_proposals_proposal_body_search"
     t.index "md5((title)::text)", name: "decidim_proposals_proposal_title_search"
     t.index ["created_at"], name: "index_decidim_proposals_proposals_on_created_at"

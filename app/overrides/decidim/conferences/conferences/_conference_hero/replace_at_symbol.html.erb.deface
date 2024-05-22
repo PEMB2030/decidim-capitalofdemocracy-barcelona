@@ -1,0 +1,3 @@
+<!-- replace "erb[loud]:contains(' @ ')" -->
+
+<%= " - #{current_participatory_space.location}" if current_participatory_space.location.present? %>
