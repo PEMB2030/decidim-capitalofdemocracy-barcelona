@@ -22,7 +22,7 @@ describe "Conferences Homepage" do
     it "includes the organization logo as its content" do
       expect(page).to have_css(".main-footer__down")
 
-      within ".main-footer__down" do
+      within ".main-footer__top" do
         expect(page).to have_css(".footer-logo")
         expect(page).to have_css(".logos")
       end

@@ -84,7 +84,7 @@ describe "Visit conferences" do
       allow(Rails.application.secrets.speakers_divisor).to receive(:dig).with(conference_city.slug.to_sym).and_return(divisor)
     end
 
-    context "when main page" do |_variable|
+    context "when main page" do
       before do
         visit decidim_conferences.conference_path(slug: conference.slug)
       end
