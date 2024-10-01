@@ -13,7 +13,7 @@ gem "decidim-conferences", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "develop"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "main"
 gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda", branch: "upgrade-28"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "main"
 
