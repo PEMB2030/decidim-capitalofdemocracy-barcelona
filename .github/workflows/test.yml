@@ -8,15 +8,16 @@ on:
   pull_request:
 
 env:
-  RUBY_VERSION: 3.1.1
+  RUBY_VERSION: 3.2.6
   NODE_VERSION: 18.17.1
+  CHROME_VERSION: 126.0.6478.182
     
 jobs:
   test:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:11
+        image: postgres:14
         ports:
           - 5432:5432
         env:
@@ -31,9 +32,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Install imagemagick and wkhtmltopdf
+        run: sudo apt install imagemagick wkhtmltopdf
+
       - uses: nanasess/setup-chromedriver@v2
         with:
-          chromedriver-version: 119.0.6045.105
+          chromedriver-version: ${{ env.CHROME_VERSION }}
   
       - name: List Chrome
         run: apt list --installed | grep chrome
@@ -43,7 +47,7 @@ jobs:
   
       - uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 119.0.6045.105
+          chrome-version: ${{ env.CHROME_VERSION }}
   
       - uses: ruby/setup-ruby@v1
         with:

@@ -9,19 +9,19 @@ checksums = [
   {
     package: "decidim-conferences",
     files: {
-      "/app/controllers/decidim/conferences/conferences_controller.rb" => "4e1bd7427cfd12c79391b451e07a2e2a",
-      "/app/models/decidim/conference.rb" => "50732d8b25ff80aa88d39a5b4a6661a8",
-      "/app/cells/decidim/conferences/content_blocks/highlighted_conferences_cell.rb" => "7f24462f802a2c277697205511103d90"
+      "/app/controllers/decidim/conferences/conferences_controller.rb" => "4c882d0666bc51a989911dd1644bc8b2",
+      "/app/models/decidim/conference.rb" => "d88512adfce7c31f7dbf3d3294b3d27e",
+      "/app/cells/decidim/conferences/content_blocks/highlighted_conferences_cell.rb" => "32a85da2c47404962b0758ad3e19c40c"
     }
   },
   {
     package: "decidim-core",
     files: {
-      "/app/cells/decidim/statistic_cell.rb" => "b6f5eb0ab09653dc5633656b84fc2f7b",
+      "/app/cells/decidim/statistic_cell.rb" => "0da539ceb425bd2da50e795428767dba",
       "/app/cells/decidim/content_blocks/hero/cta_button.erb" => "60210020a582198f0048d9c3890f552c",
       "/app/cells/decidim/content_blocks/sub_hero/show.erb" => "1624a0f9382010481af8c2b94bdd61fe",
-      "/app/cells/decidim/content_blocks/highlighted_content_banner/show.erb" => "d2dfa0c59fb2bdbc3c1e0e24af25a464",
-      "/app/cells/decidim/card_g_cell.rb" => "240f67a326264cb4a6d8f679554faccb"
+      "/app/cells/decidim/content_blocks/highlighted_content_banner/show.erb" => "a632afe2eaa4b97f35ec05615c3ab085",
+      "/app/cells/decidim/card_g_cell.rb" => "8fb136b5ba22dd0a34ac913479018542"
     }
   }
 ]

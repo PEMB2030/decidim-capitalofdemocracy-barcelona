@@ -1,5 +1,11 @@
-inherit_from:  
-  - https://raw.githubusercontent.com/decidim/decidim/release/0.28-stable/.rubocop.yml
+inherit_gem:
+  decidim-dev: rubocop-decidim.yml
 
-Rails/BulkChangeTable:
-  Enabled: false
+AllCops:
+  Exclude:
+    - 'db/**/*.rb'
+    - 'vendor/**/*'
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/system/**/*'
