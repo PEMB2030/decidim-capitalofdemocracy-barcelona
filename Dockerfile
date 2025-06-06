@@ -1,14 +1,14 @@
-FROM ruby:3.2 AS builder
+FROM ruby:3.2.8 AS builder
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
     mkdir -p /etc/apt/keyrings && \
-    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install -y nodejs yarn \
     build-essential \
     postgresql-client \
-    p7zip-full \
+    p7zip \
     libpq-dev && \
     apt-get clean
 
@@ -18,8 +18,6 @@ RUN bundle config --global frozen 1
 WORKDIR /app
 
 # Copy package dependencies files only to ensure maximum cache hit
-COPY ./package-lock.json /app/package-lock.json
-COPY ./package.json /app/package.json
 COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock
 
@@ -34,12 +32,14 @@ RUN gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xa
     find /usr/local/bundle/ -name "*.o" -delete && \
     find /usr/local/bundle/ -name ".git" -exec rm -rf {} + && \
     find /usr/local/bundle/ -name ".github" -exec rm -rf {} + && \
-    # whkhtmltopdf has binaries for all platforms, we don't need them once uncompressed
-    rm -rf /usr/local/bundle/gems/wkhtmltopdf-binary-*/bin/*.gz && \
-    rm -f /usr/local/bundle/gems/seven_zip_ruby-1.3.0/lib/seven_zip_ruby/*.dll && \
     # Remove additional unneded decidim files
     find /usr/local/bundle/ -name "decidim_app-design" -exec rm -rf {} + && \
-    find /usr/local/bundle/ -name "spec" -exec rm -rf {} +
+    find /usr/local/bundle/ -name "spec" -exec rm -rf {} + && \
+    find /usr/local/bundle/ -wholename "*/decidim-dev/lib/decidim/dev/assets/*" -exec rm -rf {} +
+
+COPY ./package-lock.json /app/package-lock.json
+COPY ./package.json /app/package.json
+COPY ./packages /app/packages
 
 RUN npm ci
 
@@ -49,14 +49,12 @@ COPY ./bin /app/bin
 COPY ./config /app/config
 COPY ./db /app/db
 COPY ./lib /app/lib
-COPY ./packages /app/packages
 COPY ./public/*.* /app/public/
 COPY ./public/partners1 /app/public/partners1
 COPY ./public/partners2 /app/public/partners2
 COPY ./public/partners3 /app/public/partners3
 COPY ./config.ru /app/config.ru
 COPY ./Rakefile /app/Rakefile
-COPY ./babel.config.json /app/babel.config.json
 COPY ./postcss.config.js /app/postcss.config.js
 
 # Compile assets with Webpacker or Sprockets
@@ -82,17 +80,21 @@ RUN mv config/credentials.bak config/credentials 2>/dev/null || true
 RUN rm -rf node_modules tmp/cache vendor/bundle test spec app/packs .git
 
 # This image is for production env only
-FROM ruby:3.2-slim AS final
+FROM ruby:3.2.8-slim AS final
 
 RUN apt-get update && \
     apt-get install -y postgresql-client \
     imagemagick \
     curl \
-    p7zip-full \
+    p7zip \
+    wkhtmltopdf \
     supervisor && \
     apt-get clean
 
 EXPOSE 3000
+
+ARG CAPROVER_GIT_COMMIT_SHA=${CAPROVER_GIT_COMMIT_SHA}
+ENV APP_REVISION=${CAPROVER_GIT_COMMIT_SHA}
 
 ENV RAILS_LOG_TO_STDOUT true
 ENV RAILS_SERVE_STATIC_FILES true
