@@ -67,8 +67,8 @@ describe "Visit conferences" do
 
   context "when speakers" do
     let(:conference) { conference_city }
-    let!(:speaker1) { create(:conference_speaker, conference:, position: { en: "Random position" }) }
-    let!(:speaker2) { create(:conference_speaker, conference:, position: { en: "Gamer" }) }
+    let!(:speaker1) { create(:conference_speaker, :published, conference:, position: { en: "Random position" }) }
+    let!(:speaker2) { create(:conference_speaker, :published, conference:, position: { en: "Gamer" }) }
     let(:divisor) do
       [{
         name: :participants
