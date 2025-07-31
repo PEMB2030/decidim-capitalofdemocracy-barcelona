@@ -1,3 +1,10 @@
+$capitalrose: #E670A6;
+$capitalblue: #3397D9;
+$city: #E670A6;
+$international: #3397D9;
+$activity: #EB7329;
+$black: #020203;
+
 /* Remove gradient from hero image */
 .extended-hero {
   &.hero__container {
@@ -40,8 +47,27 @@
 }
 /* custom logos block */
 #partner-logos {
-  .wrapper-home {
+  background-color: $capitalrose;
+
+  div.wrapper-home {
     max-width: 1200px;
     margin: 0 auto;
+    background-color: $capitalrose;
   }
+}
+
+.border-city {
+  @apply border-[#{$city}];
+}
+
+.boder-international {
+  @apply border-[#{$international}];
+}
+
+.border-activity {
+  @apply border-[#{$activity}];
+}
+
+.statistic__number {
+  @apply text-[#{$capitalblue}];
 }
